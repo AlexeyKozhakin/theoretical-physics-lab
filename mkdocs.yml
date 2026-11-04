@@ -1,0 +1,66 @@
+site_name: Theoretical Physics Lab
+site_url: https://alexeykozhakin.github.io/theoretical-physics-lab/
+repo_url: https://github.com/AlexeyKozhakin/theoretical-physics-lab
+repo_name: theoretical-physics-lab
+edit_uri: edit/main/
+
+# Заметки лежат рядом с кодом, а не в docs/
+docs_dir: .
+exclude_docs: |
+  papers/
+  site/
+  code/
+  figures/.gitkeep
+  .github/
+  requirements.txt
+
+plugins:
+  - same-dir
+  - search:
+      lang: [ru, en]
+
+theme:
+  name: material
+  language: ru
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.footer
+    - navigation.top
+    - toc.follow
+    - search.highlight
+    - content.action.view
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Тёмная тема
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Светлая тема
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - tables
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js
+
+nav:
+  - Главная: README.md
+  - CDW в магнитном поле:
+      - cdw-magnetic/README.md
+      - Вопросы и решения: cdw-magnetic/questions.md
+      - Журнал результатов: cdw-magnetic/findings.md
+      - Заметки:
+          - 01. Модель и анзац: cdw-magnetic/notes/01-setup.md
+          - 02. Почему нет точного решения: cdw-magnetic/notes/02-difficulty.md
+          - 03. Предельные случаи: cdw-magnetic/notes/03-limits.md
+          - 04. Перенормировка и аномалия: cdw-magnetic/notes/04-renorm.md

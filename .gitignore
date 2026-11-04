@@ -1,0 +1,14 @@
+# Статьи не публикуются: держим их только локально
+papers/
+
+# Сборка сайта MkDocs
+site/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
