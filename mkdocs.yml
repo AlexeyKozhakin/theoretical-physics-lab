@@ -61,7 +61,8 @@ nav:
       - Журнал результатов: cdw-magnetic/findings.md
       - Заметки:
           - 01. Модель и анзац: cdw-magnetic/notes/01-setup.md
-          - 02. Почему нет точного решения: cdw-magnetic/notes/02-difficulty.md
+          - 02. Смешивание уровней Ландау: cdw-magnetic/notes/02-difficulty.md
           - 03. Предельные случаи: cdw-magnetic/notes/03-limits.md
           - 04. Перенормировка и аномалия: cdw-magnetic/notes/04-renorm.md
           - 05. Стратегия аналитического TDP: cdw-magnetic/notes/05-strategy.md
+          - 06. Модель Раби и тепловое ядро: cdw-magnetic/notes/06-rabi-heat-kernel.md
