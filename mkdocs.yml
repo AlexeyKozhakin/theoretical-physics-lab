@@ -69,3 +69,4 @@ nav:
           - 06. Модель Раби и тепловое ядро: cdw-magnetic/notes/06-rabi-heat-kernel.md
       - "Ветка B: анализ устойчивости":
           - B0. План и трудности: cdw-magnetic/notes/stability/00-plan.md
+          - B1. Уточнённая постановка: cdw-magnetic/notes/stability/01-setup.md

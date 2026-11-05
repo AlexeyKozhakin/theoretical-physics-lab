@@ -3,7 +3,7 @@
 Задача идёт по двум веткам с общей моделью (дословные постановки — [tasks.md](tasks.md)):
 
 - **Ветка A — TDP с CDW-анзацем:** подставить анзац (8) [CDW] в поле и вычислить TDP. Заметки 01–06 ниже.
-- **Ветка B — анализ устойчивости:** устойчив ли однородный минимум в поле к малым неоднородным флуктуациям, как в Appendix F [CDW]. План: [notes/stability/00-plan.md](notes/stability/00-plan.md). План согласован (R7–R9), можно начинать расчёт.
+- **Ветка B — анализ устойчивости:** устойчив ли однородный минимум в поле к малым неоднородным флуктуациям, как в Appendix F [CDW]. План: [notes/stability/00-plan.md](notes/stability/00-plan.md). План согласован (R7–R9). Получена уточнённая постановка — разбор в [notes/stability/01-setup.md](notes/stability/01-setup.md), открыты вопросы S4–S7.
 
 ## Постановка (ветка A)
 
@@ -47,5 +47,6 @@ $$\langle\sigma\rangle = M\cos 2bx,\qquad \langle\pi\rangle = M\sin 2bx.$$
 | [notes/05-strategy.md](notes/05-strategy.md) | План получения аналитического TDP |
 | [notes/06-rabi-heat-kernel.md](notes/06-rabi-heat-kernel.md) | Предварительное сведение к AQRM, тепловое ядро и ограничения GL-разложения |
 | [notes/stability/00-plan.md](notes/stability/00-plan.md) | Ветка B: план анализа устойчивости, трудности |
+| [notes/stability/01-setup.md](notes/stability/01-setup.md) | Ветка B: уточнённая постановка, блочная структура, вид ответа |
 | `code/` | Численные расчёты (пока пусто) |
 | `figures/` | Графики (пока пусто) |
