@@ -133,8 +133,10 @@ class FieldRow:
         self.masses = np.asarray(masses, float)
         self.waves = np.asarray(waves, float)
         self.energy_max = float(energy_max)
-        vm = self.masses[::2] if vacuum_masses is None else np.asarray(vacuum_masses, float)
-        vb = self.waves[::2] if vacuum_waves is None else np.asarray(vacuum_waves, float)
+        vm = (np.unique(np.r_[self.masses[::2], self.masses[-1]]) if vacuum_masses is None
+              else np.asarray(vacuum_masses, float))
+        vb = (np.unique(np.r_[self.waves[::2], self.waves[-1]]) if vacuum_waves is None
+              else np.asarray(vacuum_waves, float))
         if vm[-1] < self.masses[-1] or vb[-1] < self.waves[-1]:
             raise ValueError("vacuum grid must cover the search grid")
         start = time.perf_counter()
@@ -161,14 +163,25 @@ class FieldRow:
         self.dV = RectBivariateSpline(vm, vb, table, kx=3, ky=3, s=0)
         hm = np.linspace(0.0, max(4.0, self.masses[-1]), 801)
         self.hom_vacuum = CubicSpline(hm, [homogeneous_vacuum(self.B, M, coupling) for M in hm])
-        # Levels on the search grid, padded with +inf.
+        # Levels on the search grid, padded with +inf (cached: independent of mu, T).
         start = time.perf_counter()
-        rows = [[low_levels(self.B, M, b, self.energy_max) for b in self.waves] for M in self.masses]
-        width = max(len(levels) for row in rows for levels in row)
-        self.levels = np.full((len(self.masses), len(self.waves), width), np.inf)
-        for i, row in enumerate(rows):
-            for j, levels in enumerate(row):
-                self.levels[i, j, :len(levels)] = levels
+        level_cache = None
+        if cache_dir is not None:
+            level_cache = Path(cache_dir) / (
+                f"levels_B{self.B:.6g}_M{self.masses[-1]:.4g}x{len(self.masses)}"
+                f"_b{self.waves[-1]:.4g}x{len(self.waves)}_E{self.energy_max:.4g}.npy")
+        if level_cache is not None and level_cache.exists():
+            self.levels = np.load(level_cache)
+        else:
+            rows = [[low_levels(self.B, M, b, self.energy_max) for b in self.waves]
+                    for M in self.masses]
+            width = max(len(levels) for row in rows for levels in row)
+            self.levels = np.full((len(self.masses), len(self.waves), width), np.inf)
+            for i, row in enumerate(rows):
+                for j, levels in enumerate(row):
+                    self.levels[i, j, :len(levels)] = levels
+            if level_cache is not None:
+                np.save(level_cache, self.levels)
         self.timing["levels"] = time.perf_counter() - start
         self.vacuum_grid = (self.hom_vacuum(self.masses)[:, None]
                             + self.dV(self.masses, self.waves))
@@ -207,7 +220,8 @@ class FieldRow:
 
 
 def scan_row(field, chemicals, temperature, masses=None, waves=None, refine_below=5e-5,
-             workers=1, cache_dir=None, confirm_margin=1e-8, confirm_below=-1e-6):
+             workers=1, cache_dir=None, confirm_margin=1e-8, confirm_below=-1e-6,
+             energy_max=None):
     """Global grid search over (M, b) for every mu of one field.
 
     Local refinement runs only where the grid gap is below refine_below.
@@ -215,7 +229,8 @@ def scan_row(field, chemicals, temperature, masses=None, waves=None, refine_belo
     from scipy.optimize import minimize, minimize_scalar
     masses = np.linspace(0, 1.6, 65) if masses is None else masses
     waves = np.linspace(0, 1.7, 69) if waves is None else waves
-    energy_max = max(chemicals) + 40 * temperature
+    if energy_max is None:
+        energy_max = max(chemicals) + 40 * temperature
     row = FieldRow(field, masses, waves, energy_max, workers=workers, cache_dir=cache_dir)
     start = time.perf_counter()
     hm = np.linspace(0, 4, 801)

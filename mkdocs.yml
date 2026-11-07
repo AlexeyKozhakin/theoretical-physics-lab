@@ -79,6 +79,7 @@ nav:
           - 15. Продолжение кандидата и бесполевой контроль: cdw-magnetic/notes/15-continuation-and-zero-field-control.md
           - 16. Первая предварительная карта фаз: cdw-magnetic/notes/16-preliminary-phase-map.md
           - 17. Быстрый движок карт: cdw-magnetic/notes/17-fast-engine.md
+          - 18. Адаптивная карта фаз: cdw-magnetic/notes/18-adaptive-map.md
       - "Ветка B: анализ устойчивости":
           - B0. План и трудности: cdw-magnetic/notes/stability/00-plan.md
           - B1. Уточнённая постановка: cdw-magnetic/notes/stability/01-setup.md
