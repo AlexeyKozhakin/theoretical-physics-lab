@@ -2,6 +2,7 @@
 
 Usage (from the repository root):
     OPENBLAS_NUM_THREADS=1 python3 cdw-magnetic/code/hom_diagram.py --T 0 --n 240
+    OPENBLAS_NUM_THREADS=1 python3 cdw-magnetic/code/hom_diagram.py --T 0 --n 300 --mu 0.75 1.5 --B 0 1
     MPLCONFIGDIR=/tmp/mpl python3 cdw-magnetic/code/hom_diagram.py --plot-only --T 0
 """
 
@@ -31,9 +32,10 @@ def row(args):
     return out
 
 
-def compute(T, n, workers):
-    mus = MU_MAX * np.arange(1, n + 1) / n
-    fields = B_MAX * np.arange(1, n + 1) / n
+def compute(T, n, workers, mu_range=(0.0, MU_MAX), b_range=(0.0, B_MAX)):
+    """n x n grid; the lower ends are excluded (B > 0 is required)."""
+    mus = mu_range[0] + (mu_range[1] - mu_range[0]) * np.arange(1, n + 1) / n
+    fields = b_range[0] + (b_range[1] - b_range[0]) * np.arange(1, n + 1) / n
     start = time.perf_counter()
     with ProcessPoolExecutor(workers) as pool:
         rows = list(pool.map(row, [(B, mus, T) for B in fields], chunksize=4))
@@ -54,7 +56,8 @@ def plot(data, path):
     # rows are fields -> transpose to [mu, B]
     P = np.array([[code[c["phase"]] for c in r] for r in data["rows"]]).T
     Mstar = np.array([[c["mass"] for c in r] for r in data["rows"]]).T
-    extent = (0, fields[-1], 0, mus[-1])
+    dm, db = mus[1] - mus[0], fields[1] - fields[0]
+    extent = (fields[0] - db, fields[-1], mus[0] - dm, mus[-1])
     colors = []
     for p in phases:
         if p == "V":
@@ -64,13 +67,14 @@ def plot(data, path):
         else:
             j = int(p[1:])
             colors.append(plt.cm.YlGn(0.35 + 0.6 * min(j, 8) / 8))
-    fig, axes = plt.subplots(1, 2, figsize=(12, 5.2), constrained_layout=True)
+    fig, axes = plt.subplots(1, 2, figsize=(13, 5.2), constrained_layout=True)
     ax = axes[0]
     ax.imshow(P, origin="lower", aspect="auto", interpolation="nearest", extent=extent,
               cmap=ListedColormap(colors), vmin=-0.5, vmax=len(phases) - 0.5)
     for p, c in zip(phases, colors):
         ax.scatter([], [], marker="s", color=c, label=p)
-    ax.legend(loc="lower right", fontsize=8, ncol=2, framealpha=0.9)
+    ax.legend(loc="upper left", bbox_to_anchor=(1.01, 1.0), fontsize=7,
+              ncol=1 if len(phases) <= 12 else 2, frameon=False, handlelength=1)
     ax.set_title(f"Homogeneous phases, T = {data['T']}")
     ax = axes[1]
     im = ax.imshow(Mstar, origin="lower", aspect="auto", interpolation="nearest", extent=extent,
@@ -89,11 +93,15 @@ def main():
     parser.add_argument("--n", type=int, default=240)
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--plot-only", action="store_true")
+    parser.add_argument("--mu", type=float, nargs=2, default=(0.0, MU_MAX))
+    parser.add_argument("--B", type=float, nargs=2, default=(0.0, B_MAX))
     args = parser.parse_args()
     tag = "T0" if args.T == 0 else f"T{args.T:g}"
+    if tuple(args.mu) != (0.0, MU_MAX) or tuple(args.B) != (0.0, B_MAX):
+        tag += f"_mu{args.mu[0]:g}-{args.mu[1]:g}_B{args.B[0]:g}-{args.B[1]:g}"
     out = HERE / f"hom-diagram-{tag}.json"
     if not args.plot_only:
-        data = compute(args.T, args.n, args.workers)
+        data = compute(args.T, args.n, args.workers, tuple(args.mu), tuple(args.B))
         out.write_text(json.dumps(data))
         print(f"T={args.T}: {args.n}x{args.n} points in {data['elapsed_s']:.0f}s")
     plot(json.loads(out.read_text()), HERE.parent / "figures" / f"hom-diagram-{tag}.png")
