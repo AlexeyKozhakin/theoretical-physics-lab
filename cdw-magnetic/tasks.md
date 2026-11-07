@@ -94,3 +94,23 @@ Now you can see that in Appendix F "STABILITY OF HOMOGENEOUS VACUUM IN 3D NJL-TY
 
 Obtain the formula for $S^2$ in the similar way as it is done in Appendix F but in the case of the set up I discussed above with Lagrangian (1). The difference with Appendix F is that there is now homogeneous magnetic field B. The phase structure in the case of non-zero B for the homogeneous condensate $\sigma$ is obtained in the framework GN model in  https://arxiv.org/abs/1307.7265. The  phase structure of NJL model in the case of non-zero B is the same as of GN model in this case since there is no condensation of $\pi$ field. For $S^2$ we would like to have maximally simplified expression, maybe expresssed as integral or in some special functions. Then we want to explore the sign of $S^2$ in order to find if there is instability of homogeneous ground state with respect to inhomogeneous fluctuations.
 ```
+
+## Ветка B: окончательная постановка (получена 2026-11-07)
+
+**Заменяет обе предыдущие формулировки ветки B по содержанию** (они сохранены выше). Полный текст — дословно, в исходном LaTeX: [stability-task-v3.tex](https://github.com/AlexeyKozhakin/theoretical-physics-lab/blob/main/cdw-magnetic/stability-task-v3.tex).
+
+Документ самодостаточен:
+- модель (1) с $D_\mu=\partial_\mu+ieA_\mu$, $A_0=A_1=0$, $A_2=Bx_1$, $B=\text{const}$ (знак $B$ или $eB$ можно фиксировать);
+- явные γ-матрицы (A.1), (A.4) и $\gamma^5$ (A6);
+- раздел о модели и однородном TDP при $B=0$ с перенормировкой (16)–(17), (21);
+- полный вывод устойчивости при $B=0$ — аналог Appendix F [CDW], формулы (F1)–(F33).
+
+**Что требуется** (раздел Task):
+1. Найти пропагатор в постоянном поле для лагранжиана (1).
+2. Повторить выкладку $B=0$ с этим пропагатором: шпуры, упрощение, по возможности взять интегралы и суммы.
+3. Посчитать $S^{(2)}$ во всех случаях: $M$ генерируется и не генерируется, при всех $\mu$.
+4. Член с $G$: при $M\neq0$ исключить уравнением щели, при $M=0$ — перенормировать, чтобы осталась только $g$.
+5. Диагонализовать матрицу 2×2 по $(\sigma,\pi)$, как в (F29)–(F32).
+6. Получить максимально упрощённое выражение (интегралы, спецфункции) и исследовать знак $S^{(2)}$ — есть ли неустойчивость однородного основного состояния.
+
+Замечания к тексту и принятые решения — [questions.md](questions.md), R13–R14. Разбор и план — [notes/stability/00-plan.md](notes/stability/00-plan.md).

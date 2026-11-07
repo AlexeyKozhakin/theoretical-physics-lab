@@ -1,0 +1,783 @@
+% Ветка B, окончательная постановка (получена 2026-11-07). Дословная копия присланного текста.
+% "2dimCDW"/"file 3dimCDW" = [CDW]; ссылки (130), (13), (12), Appendix A/D/G — на [CDW].
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath,amssymb,amsfonts,bm}
+\usepackage{geometry}
+\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+
+
+\begin{document}
+
+We consider a (2+1)-dimensional NJL-type model wih the following Lagrangian density,
+\begin{equation}
+L=\bar q\Big [\gamma^\rho\mathrm{i}D_\rho
++\mu\gamma^0\Big ]q+ \frac {G}{N}\Big
+[(\bar qq)^2+(\bar q\mathrm{i}\gamma^5 q)^2 \Big ],
+\label{1}
+\end{equation}
+where the fermion field $q(t,\vec r)$ (here $t\equiv x_0$ is a time-coordinate and $\vec r\equiv (x,y)$ is a radius-vector  of a point from the two-dimensional spatial plane)
+as well as a reducible four-dimensional spinor multiplet of the (2+1)-dimensional Lorentz group, i.e. $q(t,\vec r)\equiv q_{si}(t,\vec r)$, where $s$ and $i$ are the spinor ($s=1,2,3,4$) and $U(N)$-group indices ($i=1,...,N$), correspondingly. Moreover, there the
+summation over $\rho =0,1,2$ is implied, $\mu$ is the fermion number chemical potential. Expressions
+as well as the algebra of the
+$\gamma^\rho$ matrices ($\rho=0,1,2,5$) are the following.
+
+{\bf $\gamma$ matrices.} The two-dimensional irreducible representation of the 3-dimensional
+Lorentz group SO(2,1) is realized by the following $2\times 2$
+$\tilde\gamma$-
+matrices :
+$$
+\tilde\gamma^0=\sigma_3=
+\left (\begin{array}{cc}
+1 & 0\\
+0 &-1
+\end{array}\right ),\,\,
+\tilde\gamma^1=i\sigma_1=
+\left (\begin{array}{cc}
+0 & i\\
+i &0
+\end{array}\right ),\,\,
+\tilde\gamma^2=i\sigma_2=
+\left (\begin{array}{cc}
+0 & 1\\
+-1 &0
+\end{array}\right ),
+\eqno (A.1)
+$$
+acting on two-component Dirac
+spinors.
+
+In addition to the  Dirac matrices $\gamma^\mu~~(\mu=0,1,2)$ there
+exist other matrix, $\gamma^5$ which anticommute
+with all $\gamma^\mu~~(\mu=0,1,2)$
+\begin{eqnarray}
+\gamma^5=\gamma^0\gamma^1\gamma^2\gamma^3=
+i\left (\begin{array}{cc}
+0~,& -I\\
+I~,& 0
+\end{array}\right ),\,\,
+\label{A6}
+\end{eqnarray}
+with  $I$ being the unit $2\times 2$ matrix.
+
+
+
+
+In our case the Dirac spinors $q$ have the following
+form:
+$$
+q(x)=
+\left (\begin{array}{cc}
+\psi_{1}(x)\\
+\psi_{2}(x)
+\end{array}\right ),
+\eqno (A.4)
+$$
+with $\psi_1,\psi_2$ being two-component spinors.
+In the reducible four-dimensional spinor representation one deals
+with
+(4$\times$4) $\gamma$-matrices:
+$\gamma^\mu=diag(\tilde\gamma^\mu,-\tilde\gamma^\mu)$, where
+$\tilde\gamma^\mu$
+
+where as well
+$$
+D_{\mu}=\partial_{\mu}+ieA_{\mu}
+$$
+ where $A_{\mu}=(A_0,A_1,A_2)$, in our case $A_0=A_1=0$ and $A_2=Bx_1$, $B=const$, we can fix the sign of $B$ or $eB$, where $x_1$ is the first coordinate from plane ($x_1$, $x_2$).
+
+\section{ The model and its thermodynamic potential}
+%\label{effaction}
+
+For simplicity, first we consider a (2+1)-dimensional NJL-type model at $B=0$. It has the following Lagrangian density,
+\begin{equation}
+L=\bar q\Big [\gamma^\rho\mathrm{i}\partial_\rho
++\mu\gamma^0\Big ]q+ \frac {G}{N}\Big
+[(\bar qq)^2+(\bar q\mathrm{i}\gamma^5 q)^2 \Big ],
+\label{1}
+\end{equation}
+where the fermion field $q(t,\vec r)$ (here $t\equiv x^0$ is a time- and
+$\vec r\equiv (x,y)$ is a vector of spatial coordinates of an arbitrary point from the
+(2+1)-dimensional space-time) is transformed as a fundamental multiplet of the $O(N)$ group
+\footnote{In the present consideration this group is a rather auxiliary character. It is introduced with the aim to study the model in terms of the leading order of the nonperturbative large $N$-method.}
+as well as a reducible four-dimensional spinor multiplet of the (2+1)-dimensional Lorentz group,
+i.e. $q(t,\vec r)\equiv q_{si}(t,\vec r)$, where $s$ and $i$ are the spinor ($s=1,2,3,4$) and
+$O(N)$-group indices ($i=1,...,N$), respectively. Moreover, there the
+summation over $\rho =0,1,2$ is implied, $\mu$ is the fermion number chemical potential, and the
+corresponding expressions for Dirac spinors as well as the algebra of the
+$\gamma^\rho$ matrices ($\rho=0,1,2,5$) are presented in Appendix A.  Clearly, the Lagrangian
+(\ref{1}) is invariant under the action both of the above mentioned auxiliary $O(N)$ group and
+transformations from the $U_V(1)\times U_A(1)$ group, where $U_V(1)$ is responsible for
+the electric charge conservation, $q\to e^{i\alpha}q$, and $U_A(1)$ is the group of continuous
+axial (chiral) transformations, $q\to e^{i\alpha\gamma^5}q$.
+
+The linearized version of the Lagrangian (\ref{1}), which contains two auxiliary
+composite bosonic fields (the scalar $\sigma (t,\vec r)$ and the pseudoscalar $\pi (t,\vec r)$),
+has the following form:
+\begin{eqnarray}
+\widetilde L\ds &=&\bar q\Big [\gamma^\rho\mathrm{i}\partial_\rho
++\mu\gamma^0-\sigma -\mathrm{i}\gamma^5\pi\Big ]q
+ -\frac{N}{4G}\Big [\sigma^2+\pi^2\Big ].
+\label{2}
+\end{eqnarray}
+Evidently, the Lagrangian (\ref{2}) is equivalent to (\ref{1}), which simply follows from the use of the
+following constraint equations for the bosonic fields
+\begin{eqnarray}
+\sigma(t,\vec r)=-2\frac G{N}(\bar qq);~~~\pi (t,\vec r)=-2\frac G{N}(\bar q
+\mathrm{i}\gamma^5 q). \label{200}
+\end{eqnarray}
+Furthermore, it is clear from (\ref{200}) that the bosonic fields transform under the axial $U_{A}(1)$ group in the following manner:
+\begin{eqnarray}
+U_{A}(1):~~\sigma \to\cos (2\alpha)\sigma +\sin (2\alpha)\pi;
+~~\pi\to\cos (2\alpha)\pi-\sin (2\alpha)\sigma.
+\label{201}
+\end{eqnarray}
+Starting from Lagrangian (\ref{2}), one obtains in the leading order
+of the large $N$-expansion (i.e. in the one-fermion loop
+approximation) the following path integral expression for the
+effective action ${\cal S}_{\rm {eff}}(\sigma,\pi)$ of the bosonic
+$\sigma (t,\vec r)$ and $\pi (t,\vec r)$ fields:
+$$
+\exp(\mathrm{i}{\cal S}_{\rm {eff}}(\sigma,\pi))=
+  N'\int[d\bar q][dq]\exp\Bigl(\mathrm{i}\int\widetilde L\,dtd^2\vec r\Bigr),
+$$
+where
+\begin{equation}
+{\cal S}_{\rm {eff}}
+(\sigma,\pi)
+=-N\int dtd^2\vec r\left [\frac{\sigma^2+\pi^2}{4G}
+\right ]+\widetilde {\cal S}_{\rm {eff}},
+\label{3}
+\end{equation}
+and $N'$ is a normalization constant.
+The fermion contribution to the effective action, i.e. the term
+$\widetilde {\cal S}_{\rm {eff}}$ in (\ref{3}), is given by:
+\begin{equation}
+\exp(\mathrm{i}\widetilde {\cal S}_{\rm {eff}})=N'\int [d\bar
+q][dq]\exp\Bigl(\mathrm{i}\int\Big\{\bar q\big
+[\gamma^\rho\mathrm{i}\partial_\rho +\mu\gamma^0-\sigma -\mathrm{i}\gamma^5\pi\big
+]q\Big\}dtd^2\vec r\Bigr).
+ \label{4}
+\end{equation}
+The ground state expectation values  $\langle\sigma(t,\vec r)\rangle$ and
+$\langle\pi(t,\vec r)\rangle$, of the composite bosonic fields are determined by
+the saddle point equations,
+\begin{eqnarray}
+\frac{\delta {\cal S}_{\rm {eff}}}{\delta\sigma (t,\vec r)}=0,~~~~~
+\frac{\delta {\cal S}_{\rm {eff}}}{\delta\pi (t,\vec r)}=0.~~~~~
+\label{5}
+\end{eqnarray}
+
+In particular, in this paper we will
+use the following ansatz, which is usually called the chiral density wave (CDW) \cite{nakano} or chiral spiral \cite{thies} one:
+\begin{eqnarray}
+\langle\sigma(t,\vec r)\rangle=M,~~~\langle\pi(t,\vec r)\rangle=0, \label{6}
+\end{eqnarray}
+where $M$ is time- and $\vec r$- independent quantities.
+
+
+In the leading order of the large $N$-expansion $\Omega_\mu (M,b)$ is defined by the following expression:
+\begin{equation}
+\int dtd^2\vec r \Omega_\mu (M)=-\frac{1}{N}{\cal S}_{\rm {eff}}\{\sigma(t,\vec r),\pi(t,\vec r)\}\big|_{\sigma (t,\vec r)=\vev{\sigma(t,\vec r)},\pi(t,\vec r)=\vev{\pi(t,\vec r)}} ,
+\end{equation}
+which gives
+\begin{equation}
+\mathrm{i}\int dtd^2\vec r\Omega_\mu (M,b)\,\,=\,\,\mathrm{i}\int
+dtd^2\vec r\frac{M^2}{4G}-\frac{1}{N}\ln\left (
+\int [d\bar q][dq]\exp\Bigl(\mathrm{i}\int dtd^2\vec r
+\bar q {\cal D} q \Bigr)\right ),
+\label{8}
+\end{equation}
+where
+\begin{equation}
+{\cal D}=\gamma^\rho\mathrm{i}\partial_\rho +\mu\gamma^0+
+M.\label{9}
+\end{equation}
+
+First, let us study the properties of the TDP (\ref{130}) in the supposition that chiral condensates (\ref{6}) are spatially homogenious, i.e. there we have $b=0$. And in this case we have from Eq. (\ref{13}) the following expression for TDP
+\begin{eqnarray}
+\Omega_\mu(M)&
+\equiv & \Omega^{un}_\mu(M)=\frac{M^2}{4G}-2\int\frac{d^2p}{
+(2\pi)^2}\Big\{E+(\mu-E)\theta (\mu-E)\Big\},
+\label{0134}
+\end{eqnarray}
+where $E=\sqrt{p_1^2+p_2^2+M^2}$. %\vspace{0.3cm}
+
+\subsection{The case with $\mu=0$}
+\label{IIIA}
+%$\bullet$ {\bf The case with $\mu=0$.}
+
+First of all let us consider the vacuum case, i.e. when
+$\mu=0$ and temperature is zero.  Assuming homogeneity of
+the chiral condensate ($b=0$), we obtain from (\ref{0134}) the
+following expression for the unrenormalized effective potential of the initial
+NJL$_3$ model in vacuum (note that in vacuum the TDP is usually called effective potential):
+ \begin{eqnarray}
+\Omega_{\mu=0}^{un}(M)=V^{un}(M)&=&\frac{M^2}{4G}-
+\frac{2}{(2\pi)^2}\int d^2p\sqrt{p_1^2+p_2^2+M^2}.
+\label{15}
+\end{eqnarray}
+Formally, the effective potential (\ref{15}) is an UV
+divergent quantity, but recall that the NJL$_3$ model (1) is renormalizable \cite{rosenstein}. To renormalize the effective potential
+$V^{un}(M)$, i.e. to obtain a finite expression $V^{ren}(M)$ for it, we first
+need to regularize the integral in the right hand side of (\ref{15})
+by cutting off its integration region. Below, we consider two
+different regularization schemes.
+
+$\bullet$
+{\bf The momentum cutoff regularization}. First of all, let us regularize the expression (\ref{15}) by cutting
+momenta, i.e. we suppose that $|p_1|<\Lambda$, $|p_2|<\Lambda$ in
+(\ref{15}). As a result we have the following regularized expression
+for the effective potential (which is finite at finite values of
+$\Lambda$):
+ \begin{eqnarray}
+V^{reg1}(M)&=&\frac{M^2}{4G}-\frac{2}{\pi^2}\int_0^\Lambda
+dp_1\int_0^\Lambda dp_2\sqrt{p_1^2+p_2^2+M^2} \nonumber\\&=&M^2\left
+[\frac 1{4G}-\frac{2\Lambda\ln(1+\sqrt{2})}{\pi^2}\right
+]+\frac{M^3}{3\pi}-
+\frac{2\Lambda^3(\sqrt{2}+\ln(1+\sqrt{2}))}{3\pi^2}+{\cal
+O}(1/\Lambda), \label{14}
+\end{eqnarray}
+where ${\cal O}(1/\Lambda)$ denotes an expression which tends to
+zero as $1/\Lambda$ at $\Lambda\to \infty$.
+ Second, we suppose that the bare coupling constant
+$G$ in (\ref{15})-(\ref{14}) depends on the cutoff parameter $\Lambda$
+%($G\equiv G(\Lambda)$)
+in such a way that in the limit
+$\Lambda\to\infty$ one obtains a finite expression for effective potential. To construct the
+function $G$ vs $\Lambda$, let us look at the expression in the square brackets of (\ref{14}).
+Then it is clear that
+the dependence of $G$ on the cutoff $\Lambda$ should be the following one
+ \begin{eqnarray}
+\frac 1{4G}\equiv \frac
+1{4G(\Lambda)}=\frac{2\Lambda\ln(1+\sqrt{2})}{\pi^2}+\frac{1}{2g},
+\label{16}
+\end{eqnarray}
+where $g$ is a finite and $\Lambda$ independent model parameter with dimensionality of inverse mass. Hence, taking
+into account in (\ref{14}) the relation (\ref{16}) and ignoring there an infinite $M$-independent constant,
+one obtains the following renormalized expression for the effective potential $V(M)$, i.e.
+\begin{eqnarray}
+V^{ren}(M)&=&\lim_{\Lambda\to\infty}\left\{V^{reg1}
+(M)\Big |_{G= G(\Lambda)}+\frac{2\Lambda^3(\sqrt{2}+\ln(1+\sqrt{2}))}{3\pi^2}\right\}%\nonumber\\
+%&=&
+=\frac{M^2}{2g}+\frac{M^3}{3\pi}. \label{17}
+\end{eqnarray}
+The fact that it is possible to renormalize the effective potential
+of the initial model (1) in the leading order of the large-$N$ expansion is the reflection of a more general property of
+(2+1)-dimensional theories with four fermion interactions. Indeed,
+it is well known that in the framework of  the ''naive''
+perturbation theory (over coupling constants) these models are not
+renormalizable ones. However, as it was proved in \cite{rosenstein},
+in the framework of nonperturbative large-$N$ technique these models
+are renormalizable in each order of $1/N$ expansion.
+
+It is clear from (\ref{17}) that at $g>0$ the global minimum of the
+effective potential lies at $M=0$. So in this case chiral symmetry
+remains intact and fermions are massless. However, if $g<0$ then the
+global minimum of the function (\ref{17}) corresponds to the point
+$M_0=-\pi/g$. In this case chiral symmetry is broken spontaneously
+and fermions acquire dynamically the mass $M_0$.
+
+
+\subsection{The case with $\mu\ne 0$}
+
+It is easily seen from (\ref{13}) that at $\mu>0$ and $b=0$ the TDP of  the system looks like
+\begin{eqnarray}
+\Omega_\mu (M,b=0)&
+=&\frac{M^2}{4G}-\frac{2}{(2\pi)^2}\int d^2p\sqrt{p_1^2+p_2^2+M^2}\nonumber\\
+&-&\frac{2}{(2\pi)^2}\int d^2p\left
+(\mu-\sqrt{p_1^2+p_2^2+M^2}\right ) \theta\left
+(\mu-\sqrt{p_1^2+p_2^2+M^2}\right ). \label{20}
+\end{eqnarray}
+Evidently, after renormalization the first two terms in (\ref{20}) bring us to the
+vacuum effective potential $V^{ren}(M)$ (\ref{17})-(\ref{19}), whereas in the
+last integral of Eq. (\ref{20}), which is an UV-convergent one, it is easy
+to integrate over $p_1$ and $p_2$. As a result, we obtain the following expression for the renormalized
+TDP at $\mu>0$ and $b=0$ (see, e.g.,  in \cite{klimenko}):
+\begin{eqnarray}
+\Omega^{ren}_\mu (M,b=0)&=&V^{ren}(M)-\frac{1}{6\pi}
+\theta (\mu-M)(\mu-M)^2(\mu+2M).
+\label{21}\end{eqnarray}
+A study of this TDP shows (see, e.g., in \cite{klimenko}) that at $g>0$, the chiral symmetry
+$U_A(1)$ of the model (1) is not violated for any values of the chemical potential. However, at
+$g<0$, in the model with $\mu=0$ there is a spontaneous generation of fermion
+mass equal to $M_0=-\pi /g$. Then at $0\le\mu\le M_0$ the chiral symmetry is broken
+spontaneously and fermions have nonzero mass $M_0$, but at $\mu=M_0$ a first order phase
+transition occurs, and at $\mu >M_0$ a phase with massless fermions is realized in the model.
+
+
+
+\section{Stability of homogeneous vacuum in 3D NJL-type model under small inhomogeneous
+fluctuations}
+
+For simplicity, we consider a (2+1)-dimensional NJL-type model (below, for it we use also the
+notation NJL$_3$) with only one $O(N)$ multiplet of fermion fields. It has the following Lagrangian density,
+\begin{equation}
+L=\bar q\Big [\gamma^\rho\mathrm{i}\partial_\rho
++\mu\gamma^0\Big ]q+ \frac {G}{N}\Big
+[(\bar qq)^2+(\bar q\mathrm{i}\gamma^5 q)^2 \Big ],
+\label{F1}
+\end{equation}
+where the fermion field $q(t,\vec r)$ (here $t\equiv x^0$ is a time- and
+$\vec r\equiv (x,y)$ is a vector of spatial coordinates of an arbitrary point from the
+(2+1)-dimensional space-time) is transformed as a fundamental multiplet of the $O(N)$ group
+\footnote{In the present consideration this group is a rather auxiliary character. It is
+introduced with the aim to study the model in terms of the leading order of the nonperturbative
+large $N$-method.}
+as well as a reducible four-dimensional spinor multiplet of the (2+1)-dimensional Lorentz group,
+i.e. $q(t,\vec r)\equiv q_{si}(t,\vec r)$, where $s$ and $i$ are the spinor ($s=1,2,3,4$) and
+$O(N)$-group indices ($i=1,...,N$), respectively. Moreover, there the
+summation over $\rho =0,1,2$ is implied, $\mu$ is the fermion number chemical potential. The
+corresponding expressions for Dirac spinors as well as the algebra of the
+$\gamma^\rho$ matrices ($\rho=0,1,2,5$) are presented in Appendix A.  Clearly, the Lagrangian
+(\ref{F1}) is invariant under the action both of the above mentioned auxiliary $O(N)$ group and
+transformations from the $U_V(1)\times U_A(1)$ group, where $U_V(1)$ is responsible for
+the electric charge conservation, $q\to e^{i\alpha}q$, and $U_A(1)$ is the group of continuous
+axial (chiral) transformations, $q\to e^{i\alpha\gamma^5}q$.
+
+The linearized version of the Lagrangian (\ref{F1}), which contains two auxiliary
+composite bosonic fields (the scalar $\sigma (t,\vec r)$ and the pseudoscalar $\pi_0 (t,\vec r)$),
+has the following form:
+\begin{eqnarray}
+\widetilde L\ds &=&\bar q\Big [\gamma^\rho\mathrm{i}\partial_\rho
++\mu\gamma^0+\sigma +\mathrm{i}\gamma^5\pi_0\Big ]q
+ -\frac{N}{4G}\Big [\sigma^2+\pi_0^2\Big ].
+\label{F2}
+\end{eqnarray}
+Evidently, the Lagrangian (\ref{F2}) is equivalent to (\ref{F1}), which simply follows from the use of the
+following constraint equations for the bosonic fields
+\begin{eqnarray}
+\sigma(t,\vec r)=2\frac G{N}(\bar qq);~~~\pi_0 (t,\vec r)=2\frac G{N}(\bar q
+\mathrm{i}\gamma^5 q). \label{F200}
+\end{eqnarray}
+Moreover, it follows from Eqs. (\ref{F200}) that under continuous chiral transformations, when $q\to e^{i\alpha\gamma^5}q$, auxiliary bosonic fields are transformed as
+\begin{eqnarray}
+U_{A}(1):~~\sigma \to\cos (2\alpha)\sigma +\sin (2\alpha)\pi;
+~~\pi\to\cos (2\alpha)\pi-\sin (2\alpha)\sigma.
+\label{F201}
+\end{eqnarray}
+As a result, we see from Eq. (\ref{F201}) that the field combination $(\sigma^2(t,\vec r)+\pi_0^2 (t,\vec r))$ remains intact under chiral $U_A(1)$ transformations.
+Starting from Lagrangian (\ref{F2}), one obtains in the leading order
+of the large $N$-expansion (i.e. in the one-fermion loop
+approximation) the following path integral expression for the
+effective action ${\cal S}_{\rm {eff}}(\sigma,\pi)$, which indeed is a functional of the
+bosonic $\sigma (t,\vec r)$ and $\pi_0 (t,\vec r)$ fields:
+$$
+\exp(\mathrm{i}{\cal S}_{\rm {eff}}(\sigma,\pi))=
+  N'\int[d\bar q][dq]\exp\Bigl(\mathrm{i}\int\widetilde L\,dtd^2\vec r\Bigr),
+$$
+where
+\begin{equation}
+{\cal S}_{\rm {eff}}
+(\sigma,\pi_0)
+=-N\int dtd^2\vec r\left [\frac{\sigma^2(t,\vec r)+\pi_0^2(t,\vec r)}{4G}
+\right ]+\widetilde {\cal S}_{\rm {eff}},
+\label{F3}
+\end{equation}
+and $N'$ is a normalization constant. The fermion contribution to this effective action, i.e. the term
+$\widetilde {\cal S}_{\rm {eff}}$ in (\ref{F3}), is given by:
+\begin{equation}
+\exp(\mathrm{i}\widetilde {\cal S}_{\rm {eff}})=N'\int [d\bar
+q][dq]\exp\Bigl(\mathrm{i}\int\Big\{\bar q\big
+[\gamma^\rho\mathrm{i}\partial_\rho +\mu\gamma^0+\sigma(t,\vec r) +\mathrm{i}\gamma^5\pi_0(t,\vec r)\big
+]q\Big\}dtd^2\vec r\Bigr)=\det D.
+ \label{F4}
+\end{equation}
+Here $D\,=\,\gamma^\rho\mathrm{i}\partial_\rho
++\mu\gamma^0+\sigma (t,\vec r)+i\gamma^5\pi_0 (t,\vec r)$. Now, using general formula
+$\det D=\exp\left(Tr_{xsf}\ln D\right)$, where $Tr$ operation is supposed over coordinates (x),
+spinor (s) and $O(N)$, i.e. flavor (f), indices, one can obtain the following expression for the effective action in the large-$N$ limit (mean-field approximation),
+\begin{equation}
+{\cal S}_{\rm {eff}}(\sigma,\pi_0)
+=-N\int dtd^2\vec r\left[\frac{\sigma^2(t,\vec r)+\pi^2_0 (t,\vec r)}{4G}\right]-iN {\rm Tr}_{xs}\ln D.
+\label{F6}
+\end{equation}
+The ground state expectation values  $\langle\sigma(t,\vec r)\rangle$ and $\langle\pi_0(t,\vec r)\rangle$ of
+the composite bosonic fields $\sigma$ and $\pi_0$ are the solutions of the following
+saddle point equations,
+\begin{eqnarray}
+\frac{\delta {\cal S}_{\rm {eff}}(\sigma,\pi_0)}{\delta\sigma (t,\vec r)}=0,~~~~~
+\frac{\delta {\cal S}_{\rm {eff}}(\sigma,\pi_0)}{\delta\pi_0 (t,\vec r)}=0.
+\label{F7}
+\end{eqnarray}
+We suppose that the system defined by the Lagrangian (\ref{F1}) is in the state with thermodynamic equilibrium, so the quantities
+$\vev{\sigma(t,\vec r)}$ and $\vev{\pi_0(t,\vec r)}$ should not depend on time coordinate.
+In vacuum, i.e. in the state corresponding to an empty space with zero particle density and zero
+value of the chemical potential $\mu$, these quantities do not depend on spatial coordinates as
+well, i.e. scalar and pseudoscalar fermion-antifermion condensates are homogeneous. But
+even when studying the phase structure of dense quark matter, i.e., with non-zero $\mu$, it is
+usually assumed that these condensates (order parameters) are still independent of the spatial
+coordinates.
+
+\subsection{Homogeneous ansatz}
+
+So, first of all, let us also for simplicity suppose  that arguments of the effective
+action functional  ${\cal S}_{\rm {eff}}(\sigma,\pi_0)$ (\ref{F6}) do not depend on spacetime
+coordinates, i.e. $\sigma(t,\vec r)\equiv\sigma=const$ and $\pi_0(t,\vec r)\equiv\pi_0=const$.
+Moreover, in this case in the Dirac operator $D$ of Eq. (\ref{F6}) there are no coordinate
+dependency in all nonderivative terms, and we denote it as $D_0$, i.e. its coordinate matrix
+element looks like $$D_0(x-y)=\left(\gamma^\rho\mathrm{i}\partial_\rho
++\mu\gamma^0+\sigma +i\gamma^5\pi_0\right)\delta (x-y)=
+\int\frac{d^3p}{(2\pi)^3}\left(\not\!{\tilde p}+\sigma+i\gamma^5\pi_0\right)e^{-ip(x-y)}.$$
+Hence, Fourier transform $\overline{D_0}(p)$ of $D_0(x-y)$ has the form $\overline{D_0}(p)=
+\left(\not\!{\tilde p}+\sigma+i\gamma^5\pi_0\right)$. So
+\begin{eqnarray}
+S_0(x-y)\equiv D_0^{-1}=\left(\gamma^\rho\mathrm{i}\partial_\rho
++\mu\gamma^0+\sigma +i\gamma^5\pi_0\right)^{-1}
+=\int\frac{d^3p}{(2\pi)^3}\frac{\tilde p_\nu\gamma^\nu-\sigma+i\gamma^5\pi_0}
+{\tilde p^2-\sigma^2-\pi^2_0}e^{-ip(x-y)},\label{F8}
+\end{eqnarray}
+where $\tilde p=(p_0+\mu,p_1,p_2)$. Then TDP
+$\Omega_\mu (\sigma,\pi_0)$ of the model in the homogeneous case is defined by the relation
+\begin{eqnarray}
+{\cal S}_{\rm {eff}}(\sigma,\pi_0)=-N\Omega_\mu (\sigma,\pi_0)\int d^3x
+=-N\left[\frac{\sigma^2+\pi^2_0}{4G}\right]\int d^3x-iN {\rm Tr}_{xs}\ln D_0\nonumber\\=
+-N\left\{\frac{\sigma^2+\pi^2_0}{4G}+i\int\frac{d^3p}{(2\pi)^3}
+\ln(\det\overline{D_0}(p))\right\}\int d^3x.
+\label{F9}
+\end{eqnarray}
+Here we use the notation $d^3x=dtd^2\vec r$ and take into account the relation (\ref{G7}) from
+Appendix \ref{ApG}. $\blacktriangleright$ Note that $\overline{D_0}(p)=\left(\not\!{\tilde p}+\sigma+i\gamma^5\pi_0\right)$,
+i.e. it is a 4$\times$4 matrix in spinor space. To find a determinant of this matrix, we use the following
+relation $\det\overline{D_0}(p)=\det\left(\gamma^3\overline{D_0}(p)\gamma^3\right)=\det
+\left(-\not\!{\tilde p}+\sigma-i\gamma^5\pi_0\right)$, where matrix $\gamma^3$ and its properties
+are presented in Appendix \ref{ApA}. Hence
+\begin{eqnarray}
+\det\overline{D_0}(p)=\Big\{\det\big[\left(-\not\!{\tilde p}+\sigma-i\gamma^5\pi_0\right)
+\left(\not\!{\tilde p}+\sigma+i\gamma^5\pi_0\right)\big]\Big\}^{1/2}=
+\Big\{\det\left[(\sigma^2+\pi_0^2-\tilde p^2)1\!\!1_s\right]\Big\}^{1/2},\label{F10}
+\end{eqnarray}
+where $1\!\!1_s$ is the unit matrix in the four dimensional spinor space. It is evident that $\det\left[(\sigma^2+\pi_0^2-\tilde p^2)1\!\!1_s\right]=(\sigma^2+\pi_0^2-\tilde p^2)^4$. As a result we see that $\det\overline{D_0}(p)=(\sigma^2+\pi_0^2-\tilde p^2)^2$. Moreover, it is clear from Eq. (\ref{F9}) that the TDP
+$\Omega_\mu (\sigma,\pi_0)$ looks like
+\begin{eqnarray}
+\Omega_\mu (\sigma,\pi_0)=\frac{\sigma^2+\pi_0^2}{4G}+i\int\frac{d^3p}{(2\pi)^3}\mathrm{ln}\Big\{\big[(p_0+\mu)^2-E^2\big]^2\Big\},
+\label{F11}
+\end{eqnarray}
+where $E=\sqrt{\sigma^2+\pi_0^2+\vec p^2}$. $\blacktriangleleft$ Of course, the TDP (\ref{F11})
+is not renormalized and depends effectively on a single field combination $M\equiv
+\sqrt{\sigma^2+\pi_0^2}$, i.e. $\Omega_\mu (\sigma,\pi_0)\equiv\Omega_\mu (M)$. To get a finite
+(renormalized) expression for it, it is useful to see that this unrenormalized TDP coincides with TDP (\ref{12}) $\Omega_\mu (M,b)$ at $b=0$. Its renormalized expression obtained in the framework of momentum cutoff regularization scheme is presented by Eq. (\ref{21}). There, instead of a bare coupling constant $G$, there appears a finite parameter $g$ with the dimension of the inverse mass. These quantities are connected by the relation (\ref{16}), $\frac 1{4G}\equiv \frac
+1{4G(\Lambda)}=\frac{2\Lambda\ln(1+\sqrt{2})}{\pi^2}+\frac{1}{2g},$ where $\Lambda$ is the regularization cutoff parameter. Then, as it was shown in Ref. \cite{klimenko}, at $g>0$ chiral symmetry remains intact, but at $g<0$ it can be broken spontaneously. The saddle point (or gap) equations (\ref{F7}) take the form
+\begin{eqnarray}
+\frac{\partial \Omega_\mu (\sigma,\pi_0)}{\partial\sigma}\equiv \frac{\sigma}{2G}-
+4\sigma i\int\frac{d^3p}{(2\pi)^3}\frac{1}{[(p_0+\mu)^2-E^2]}=0,\nonumber\\
+\frac{\partial \Omega_\mu (\sigma,\pi_0)}{\partial\pi_0}\equiv \frac{\pi_0}{2G}-
+4\pi_0 i\int\frac{d^3p}{(2\pi)^3}\frac{1}{[(p_0+\mu)^2-E^2]}=0.
+\label{F12}
+\end{eqnarray}
+The coordinates of the GMP of the TDP $\Omega_\mu(\sigma,\pi_0)$ are no more, but the solution of the gap system (\ref{F12}). For simplicity, we will use the same notation $(\sigma,\pi_0)$ for the coordinates of the GMP of the TDP, as for its arguments.
+It is clear from Eqs. (\ref{F12}) that there are four types of GMPs of the TDP, i) $(\sigma\ne 0,\pi_0\ne 0)$,
+ii) $(\sigma\ne 0,\pi_0=0)$, iii) $(\sigma=0,\pi_0\ne 0)$, and iv) $ (\sigma=0,\pi_0=0)$.
+For each of the GMPs i)--iii) the quantity $M_0\equiv\sqrt{\sigma^2+\pi_0^2}$ is the same, i.e. $M_0=-\pi/g$. These GMPs are $U_A(1)$ equivalent and can appear only at $g<0$. The parameter $M_0$ in this case is connected with coupling constant $G$ by the relation
+\begin{eqnarray}
+\frac{1}{2G}=4 i\int\frac{d^3p}{(2\pi)^3}\frac{1}{[(p_0+\mu)^2-M_0^2-p_1^2-p_2^2]}.
+\label{F13}
+\end{eqnarray}
+As it is shown in Ref. \cite{klimenko}, at $g<0$ and $\mu<M_0$ the GMP of the TDP (\ref{F11}) can be one of i)--iii) types, but at $\mu>M_0$ it is of the form iv) even at $g<0$ (recall that at $g>0$ the GMP is also has the form iv)).
+
+\subsection{Inhomogeneous fluctuations of the GMPs of the form i)--iii)}
+
+Let us suppose that TDP $\Omega_\mu (\sigma,\pi_0)$ (\ref{F11}) has a global minimum at
+the point $(\sigma,\pi_0)$ with $M_0=\sqrt{\sigma^2+\pi_0^2}\ne 0$, i.e. it is one of the forms i)--iii). In this case the relation $\mu<M_0$ must be carried out obligatotorily. Usually, ground state of the system is identified just with this
+GMP, because in this point system has a least energy. Of course, this point is stable under
+{\it homogeneous} fluctuations of order parameters $\sigma$ and $\pi_0$, which are, by definition, the GMP of
+the TDP. Now we want to study the stability of this state with respect to small
+{\it inhomogeneous} fluctuations. To this end we suppose that arguments $\sigma (t,\vec r)$ and
+$\pi_0(t,\vec r)$ of the effective action ${\cal S}_{\rm {eff}}(\sigma(t,\vec r),\pi_0(t,\vec r))$ (\ref{F6}) has the following form
+$$\sigma(t,\vec r)\equiv\sigma(x)=\sigma+\epsilon (x),~\pi_0(t,\vec r)\equiv\pi_0(x)=\pi_0+\omega (x),$$
+where $\epsilon (x)\equiv\epsilon (t,x^1,x^2)$ and $\omega (x)\equiv\omega (t,x^1,x^2)$ are
+small fluctuation of the homogeneous condensates $\sigma$ and $\pi_0$, respectively.
+(Here and below we use an abbreviation $x$ for a set of three Minkowski coordinates,
+$x\equiv (t,x^1,x^2)$.) Then
+\begin{eqnarray}
+\ln D=\ln \big[(\gamma^\rho\mathrm{i}\partial_\rho
++\mu\gamma^0+\sigma+i\gamma^5\pi_0)+\epsilon+i\gamma^5\omega\big]=\ln S_0^{-1}+\ln
+\big[1+S_0\cdot (\epsilon+i\gamma^5\omega)\big],
+\label{F14}
+\end{eqnarray}
+where $S_0^{-1}\,=\,\gamma^\rho\mathrm{i}\partial_\rho
++\mu\gamma^0+\sigma+i\gamma^5\pi_0$. Recall that (here we use the notation $\tilde p\equiv (p_0+\mu,p_1,p_2)$)
+\begin{eqnarray}
+S_0(x-y)=\int\frac{d^3p}{(2\pi)^3}\frac{\tilde p_\nu\gamma^\nu-\sigma+i\gamma^5\pi_0}
+{\tilde p^2-\sigma^2-\pi_0^2}e^{-ip(x-y)}\equiv \int\frac{d^3p}{(2\pi)^3}\overline{S_0}(p)
+e^{-ip(x-y)}.
+\label{F15}
+\end{eqnarray}
+Expanding the functional ${\cal S}_{\rm {eff}}(\sigma(t,\vec r),\pi_0(t,\vec r))$ (\ref{F6})  in the neighborhood of the GMP $(\sigma,\pi_0)$ in a Taylor series with respect to the small fluctuations $\epsilon$ and $\omega$, we have
+\begin{eqnarray}
+{\cal S}_{\rm {eff}}
+(\sigma+\epsilon(x),\pi_0+\omega(x))=
+-\frac{N}{4G}\int d^3x \Big[\big(\sigma+\epsilon(x)\big)^2+\big(\pi_0+\omega(x)\big)^2\Big]-iN {\rm Tr}_{xs}\Big\{\ln S_0^{-1}+
+\ln(1+S_0\cdot \big(\epsilon+i\gamma^5\omega\big)\Big\}\nonumber\\=-\frac{N}{4G}\int d^3x \big(\sigma^2+\pi_0^2\big)-iN
+{\rm Tr}_{xs}\Big\{\ln S_0^{-1}\Big\}-\frac{N}{4G}\int d^3x \big(2\sigma\epsilon(x)+2\pi_0\omega(x)\big)
+-iN {\rm Tr}_{xs}\Big\{S_0\cdot \big(\epsilon+i\gamma^5\omega\big)\Big\}\nonumber\\-\frac{N}{4G}\int d^3x
+\big(\epsilon^2(x)+\omega^2(x)\big)+\frac{iN}{2} {\rm Tr}_{xs}\Big\{S_0\cdot \big(\epsilon+
+i\gamma^5\omega\big)\cdot S_0\cdot \big(\epsilon+i\gamma^5\omega\big)\Big\}+\cdots\equiv
+{\cal S}^{(0)}_{\rm {eff}}+{\cal S}^{(1)}_{\rm {eff}}+{\cal S}^{(2)}_{\rm {eff}}+\cdots,~~~
+\label{F16}
+\end{eqnarray}
+where ${\cal S}^{(0)}_{\rm {eff}}=-N\Omega_\mu (\sigma,\pi_0)\int d^3x$ and the TDP $\Omega_\mu
+(\sigma,\pi_0)$ is presented in Eq. (\ref{F11}). Since
+${\rm Tr}_{xs}\Big\{S_0\cdot \big(\epsilon+i\gamma^5\omega\big)\Big\}=\int d^3x\cdot {\rm tr}_s
+\Big\{S_0(0) \big(\epsilon (x)+i\gamma^5\omega(x)\big)\Big\}~$ (see Eq. (\ref{G10}) in Appendix \ref{ApG}),
+it is easy to see that
+\begin{eqnarray}
+{\cal S}^{(1)}_{\rm {eff}}&=&-N\int d^3x\Big\{\epsilon (x)\Big[\frac{\sigma}{2G}-4i\sigma
+\int\frac{d^3p}{(2\pi)^3}\frac{1}{\tilde p^2-\sigma^2-\pi_0^2}\Big]+\omega(x)\Big[\frac{\pi_0}{2G}-4i\pi_0
+\int\frac{d^3p}{(2\pi)^3}\frac{1}{\tilde p^2-\sigma^2-\pi_0^2}\Big]\Big\}\equiv 0.~~
+\label{F17}
+\end{eqnarray}
+The last identity is trivial since $\sigma$ and $\pi_0$ are the solution of one of the gap Eqs. (\ref{F12}).
+
+Finally, due to a general relation (see Eq. (\ref{G1}) in Appendix \ref{ApG})
+$${\rm Tr}_{xs}\Big\{S_0\cdot \big(\epsilon+i\gamma^5\omega\big)\cdot S_0\cdot \big(\epsilon+i\gamma^5
+\omega\big)\Big\}
+=\int d^3x\int d^3y~{\rm tr}_s\Big\{S_0(x-y)\big(\epsilon(y)+i\gamma^5\omega(y)\big)
+S_0(y-x)\big(\epsilon(x)+i\gamma^5\omega(x)\big)\Big\},$$ we have for ${\cal S}^{(2)}_{\rm {eff}}$ term of Eq. (\ref{F16}) the following expression
+\begin{eqnarray}
+{\cal S}^{(2)}_{\rm {eff}}&=&-\frac{N}{4G}\int d^3x \big(\epsilon^2(x)+\omega^2(x)\big)+\frac{iN}{2}\int d^3x\int d^3y~\Big\{{\rm tr}_s\Big[S_0(x-y)S_0(y-x)\Big]\epsilon(y)\epsilon(x)\nonumber\\&+&
+i\cdot {\rm tr}_s\Big[S_0(x-y)\gamma^5S_0(y-x)\Big]\omega(y)\epsilon(x)+i\cdot {\rm tr}_s\Big[S_0(x-y)S_0(y-x)\gamma^5\Big]\omega(x)\epsilon(y)\nonumber\\&-&{\rm tr}_s\Big[S_0(x-y)\gamma^5S_0(y-x)\gamma^5\Big]\omega(x)\omega(y)\Big\}.
+\label{F18}
+\end{eqnarray}
+
+$\bullet$ Let us rewrite the last expression in terms of the Fourier transformations of the propagators (see in Eq. (\ref{F15})), as well as the fluctuation fields $\epsilon (x)$ and $\omega(x)$, i.e., we use in (\ref{F18}) the relation (\ref{F15}), as well as the following representation
+\begin{eqnarray}
+\epsilon (x)=\int\frac{d^3q_1}{(2\pi)^3}\overline\epsilon (q_1)e^{-iq_1x},~~~
+\omega (y)=\int\frac{d^3q_2}{(2\pi)^3}\overline\omega (q_2)e^{-iq_2y}.
+\label{F19}
+\end{eqnarray}
+In terms of Fourier transformations one of the $\gamma^5$ terms in Eq. (\ref{F18}) has the form
+\begin{eqnarray}
+T_{\gamma^51}\equiv\frac{iN}{2}\int d^3x\int d^3y~
+i\cdot {\rm tr}_s\Big[S_0(x-y)\gamma^5S_0(y-x)\Big]\omega(y)\epsilon(x)=\frac{-N}{2}\int d^3x d^3y\int\frac{d^3p_1}{(2\pi)^3}\frac{d^3p_2}{(2\pi)^3}\frac{d^3q_1}{(2\pi)^3}\frac{d^3q_2}{(2\pi)^3}\times\nonumber\\{\rm tr}_s\Big\{\overline S(p_1)\gamma^5\overline
+S(p_2)\Big\}\overline \epsilon (q_1)\overline \omega (q_2)e^{-ip_1(x-y)-ip_2(y-x)-iq_1x-iq_2y}.~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\label{F20}
+\end{eqnarray}
+After integrations over $x$ and $y$, it takes the form
+\begin{eqnarray}
+T_{\gamma^51}&=&\frac{-N}{2}\int d^3q_1d^3q_2\frac{d^3p_1}{(2\pi)^3}\frac{d^3p_2}{(2\pi)^3}\delta^{(3)}(p_1-p_2+q_1)\delta^{(3)}(p_2-p_1+q_2)%\nonumber\\
+{\rm tr}_s\Big\{\overline S(p_1)\gamma^5\overline
+S(p_2)\Big\}\overline \epsilon (q_1)\overline \omega (q_2).
+\label{F21}
+\end{eqnarray}
+Then, integrating in Eq. (\ref{F21}) over $q_1$ and $q_2$ with the help of $\delta$-functions, we have
+\begin{eqnarray}
+T_{\gamma^51}&=&\frac{-N}{2}\int \frac{d^3p_1}{(2\pi)^3}\frac{d^3p_2}{(2\pi)^3}{\rm tr}_s\Big\{\overline S(p_1)\gamma^5\overline
+S(p_2)\Big\}\overline \epsilon (p_2-p_1)\overline \omega (p_1-p_2)\nonumber\\&=&\frac{-N}{2}\int \frac{d^3p}{(2\pi)^3}\frac{d^3q}{(2\pi)^3}{\rm tr}_s\Big\{\overline S(p)\gamma^5\overline
+S(p+q)\Big\}\overline \epsilon (q)\overline \omega (-q)\nonumber\\&=&N4i\pi_0\sigma\int \frac{d^3p}{(2\pi)^3}\frac{d^3q}{(2\pi)^3}\frac{\overline \epsilon (q)\overline \omega (-q)}{[(p_0+\mu)^2-M_0^2-\vec p^2][(p_0+q_0+\mu)^2-M_0^2-(\vec p+\vec q)^2]}.
+\label{F22}
+\end{eqnarray}
+Here we use the notation $M_0^2=\sigma^2+\pi_0^2$. We have already
+mentioned above that in state of thermodynamic equilibrium the order parameters, i.e. the
+quantities $\sigma (x),\pi_0(x)$ and $\epsilon (x),\omega(x)$, should not depend on time, i.e. on the coordinate $x^0$. As it is clear from Eq. (\ref{F19}), in terms of Fourier transforms $\overline \epsilon (q)$ and $\overline \omega (q)$ it means that
+$\overline \epsilon (q)\equiv \overline \epsilon (q_0,q_1,q_2)=2\pi \delta (q_0)\overline \epsilon (q_1,q_2)$. Similarly, in this case we have $\overline \omega(q)\equiv \overline \omega (q_0,q_1,q_2)=2\pi \delta (q_0)\overline \omega (q_1,q_2)$. Moreover, since $\delta (q_0)=\int\frac{dx^0}{2\pi}e^{iq_0x^0}$, it is clear
+that $\delta (q_0){\Big |}_{q_0=0}=\int\frac{dx^0}{2\pi} ~(*)$ (see also the remark at the end of Appendix \ref{ApG}). Supposing that in Eq. (\ref{F22})
+\begin{eqnarray}
+\overline \epsilon (q)\equiv \overline \epsilon (q_0,q_1,q_2)=2\pi \delta (q_0)\overline
+\epsilon (q_1,q_2),~\overline \omega(-q)\equiv \overline \omega (-q_0,-q_1,-q_2)=2\pi \delta (-q_0)\overline \omega (-q_1,-q_2),
+\label{0F23}
+\end{eqnarray}
+we have integrated there over $q_0$ and then taken into account the above relation $(*)$. As a result:
+\begin{eqnarray}
+T_{\gamma^51}=N4i\pi_0\sigma\int dx^0\int \frac{dq_1dq_2}{(2\pi)^2}\frac{d^3p}{(2\pi)^3}\frac{\overline \epsilon (q_1,q_2)\overline \omega (-q_1,-q_2)}{[(p_0+\mu)^2-M_0^2-\vec p^2][(p_0+\mu)^2-M_0^2-(\vec p+\vec q)^2]}.
+\label{F024}
+\end{eqnarray}
+
+$\bullet$ The second $\gamma^5$ term in Eq. (\ref{F18}) has the form
+\begin{eqnarray}
+T_{\gamma^52}\equiv\frac{iN}{2}\int d^3x\int d^3y~
+i\cdot {\rm tr}_s\Big[S_0(x-y)S_0(y-x)\gamma^5\Big]\omega(x)\epsilon(y).
+\label{F23}
+\end{eqnarray}
+Using in Eq. (\ref{F23}) a well-known property of the  ${\rm tr}$ operation, i.e. ${\rm tr}
+(A\cdot B\cdot C)={\rm tr}(C\cdot A\cdot B)$, and then carrying out a substitution of
+integration variables there, i.e. $x\leftrightarrow y$, it is easy to see that
+$T_{\gamma^52}=T_{\gamma^51}$. Changing variables in the integral (\ref{F024}), $\vec q\to -\vec q$, we get for $T_{\gamma^52}$ the expression
+\begin{eqnarray}
+T_{\gamma^52}=N4i\pi_0\sigma\int dx^0\int \frac{dq_1dq_2}{(2\pi)^2}\frac{d^3p}{(2\pi)^3}\frac{\overline \omega (q_1,q_2)\overline \epsilon (-q_1,-q_2)}{[(p_0+\mu)^2-M_0^2-\vec p^2][(p_0+\mu)^2-M_0^2-(\vec p-\vec q)^2]}.
+\label{F023}
+\end{eqnarray}
+
+$\bullet$ The $T_{\epsilon\epsilon}$ term of Eq. (\ref{F18}) looks like (here $M_0^2=\sigma^2+\pi_0^2$)
+\begin{eqnarray}
+T_{\epsilon\epsilon}&=&-\frac{N}{4G}\int d^3x \epsilon^2(x)+\frac{iN}{2}\int d^3x\int d^3y~
+\Big\{{\rm tr}_s\Big[S_0(x-y)S_0(y-x)\Big]\epsilon(y)\epsilon(x)\nonumber\\&=&
+-N\int \frac{d^3q}{(2\pi)^3}
+\overline \epsilon (q)\overline \epsilon (-q)\Big\{\frac{1}{4G}-\frac{i}{2}\int \frac{d^3p}{(2\pi)^3}{\rm tr}_s
+\Big[\overline S(p)\overline S(p+q)\Big]\Big\}=-N\int \frac{d^3q}{(2\pi)^3}
+\overline \epsilon (q)\overline \epsilon (-q)\Big\{\frac{1}{4G}\nonumber\\
+&-&2i\int \frac{d^3p}{(2\pi)^3}\frac{(p_0+\mu)(p_0+q_0+\mu)-\vec p(\vec p+\vec q)+
+\sigma^2-\pi_0^2}{[(p_0+\mu)^2-M_0^2-\vec p^2][(p_0+q_0+\mu)^2-M_0^2-(\vec p+\vec q)^2]}
+\Big\}.
+\label{F24}
+\end{eqnarray}
+If there is a state of thermodynamic equilibrium in the system, then $T_{\epsilon\epsilon}$
+transforms into (below we use the notations $\overline\epsilon (\pm\vec q)\equiv\overline
+\epsilon (\pm q_1,\pm q_2)$)
+\begin{eqnarray}
+T_{\epsilon\epsilon}&=&-N\int dx^0\int \frac{dq_1dq_2}{(2\pi)^2}
+\overline \epsilon (\vec q)\overline \epsilon (-\vec q)\Big\{\frac{1}{4G}
+-2i\int \frac{d^3p}{(2\pi)^3}\frac{(p_0+\mu)^2-\vec p(\vec p+\vec q)+
+\sigma^2-\pi_0^2}{[(p_0+\mu)^2-M_0^2-\vec p^2][(p_0+\mu)^2-M_0^2-(\vec p+\vec q)^2]}
+\Big\}\nonumber\\
+&=&2iN\int dx^0\int \frac{dq_1dq_2}{(2\pi)^2}
+\overline \epsilon (\vec q)\overline \epsilon (-\vec q)\int \frac{d^3p}{(2\pi)^3}\frac{2\sigma^2+
+\vec q(\vec p+\vec q)}{[(p_0+\mu)^2-M^2-\vec p^2][(p_0+\mu)^2-M^2-(\vec p+\vec q)^2]}
+\Big\}.
+\label{F25}
+\end{eqnarray}
+The last expression in Eq. (\ref{F25}) is obtained after taking into account the equality
+(\ref{F13}) for $G$. Finally, the $T_{\omega\omega}$ term of Eq. (\ref{F18}) is selected in the form (here $M_0^2=\sigma^2+\pi_0^2$)
+\begin{eqnarray}
+T_{\omega\omega}&=&-\frac{N}{4G}\int d^3x \omega^2(x)-\frac{iN}{2}\int d^3x\int d^3y~
+\Big\{{\rm tr}_s\Big[S_0(x-y)\gamma^5S_0(y-x)\gamma^5\Big]\omega(y)\omega(x)\nonumber\\&=&
+-N\int \frac{d^3q}{(2\pi)^3}
+\overline \omega (q)\overline \omega (-q)\Big\{\frac{1}{4G}+\frac{i}{2}\int \frac{d^3p}{(2\pi)^3}{\rm tr}_s
+\Big[\overline S(p)\gamma^5\overline S(p+q)\gamma^5\Big]\Big\}=-N\int \frac{d^3q}{(2\pi)^3}
+\overline \omega (q)\overline \omega (-q)\Big\{\frac{1}{4G}\nonumber\\
+&+&2i\int \frac{d^3p}{(2\pi)^3}\frac{-(p_0+\mu)(p_0+q_0+\mu)+\vec p(\vec p+\vec q)+
+\sigma^2-\pi_0^2}{[(p_0+\mu)^2-M_0^2-\vec p^2][(p_0+q_0+\mu)^2-M_0^2-(\vec p+\vec q)^2]}
+\Big\}.
+\label{F26}
+\end{eqnarray}
+If a state of thermodynamic equilibrium is realized in a system, then conditions (\ref{0F23})
+must be met. In this case (below we use the notations $\overline\omega (\pm\vec q)\equiv\overline
+\omega (\pm q_1,\pm q_2)$)
+\begin{eqnarray}
+T_{\omega\omega}&=&-N\int dx^0\int \frac{dq_1dq_2}{(2\pi)^2}
+\overline \omega (\vec q)\overline \omega (-\vec q)\Big\{\frac{1}{4G}
+-2i\int \frac{d^3p}{(2\pi)^3}\frac{(p_0+\mu)^2-\vec p(\vec p+\vec q)-
+\sigma^2+\pi_0^2}{[(p_0+\mu)^2-M^2-\vec p^2][(p_0+\mu)^2-M^2-(\vec p+\vec q)^2]}
+\Big\}\nonumber\\&=&2iN\int dx^0\int \frac{dq_1dq_2}{(2\pi)^2}
+\overline \omega (\vec q)\overline \omega (-\vec q)\int \frac{d^3p}{(2\pi)^3}\frac{2\pi_0^2+
+\vec q(\vec p+\vec q)}{[(p_0+\mu)^2-M_0^2-\vec p^2][(p_0+\mu)^2-M_0^2-(\vec p+\vec q)^2]}
+\Big\}.
+\label{F27}
+\end{eqnarray}
+%This expression is very similar to Eq. (\ref{F25})
+
+$\bullet$ Now, changing variables in the $p$ integrals (\ref{F024}), (\ref{F25}) and
+(\ref{F27}), when $\vec p\to\vec p-\vec q/2$, and $\vec p\to \vec p+\vec q/2$ in Eq.
+(\ref{F023}) and then ignoring the linear over $\vec p$ terms in the numerators of the obtained
+$p$ integrals (see the corresponding remark just after Eq. (\ref{D26})), we have
+\begin{eqnarray}
+T_{\gamma^51}=2iN\int dx^0\int \frac{d^2\vec q}{(2\pi)^2}\overline \epsilon (-\vec q)
+\overline \omega (\vec q)\int
+\frac{d^3p}{(2\pi)^3}
+\frac{2\sigma\pi_0}{[(p_0+\mu)^2-M_0^2-(\vec p-\vec q/2)^2][(p_0+\mu)^2-M_0^2-(\vec p+\vec q/2)^2]},\nonumber\\
+T_{\gamma^52}=2iN\int dx^0\int \frac{d^2\vec q}{(2\pi)^2}\overline \epsilon (-\vec q)
+\overline \omega (\vec q)\int
+\frac{d^3p}{(2\pi)^3}
+\frac{2\sigma\pi_0}{[(p_0+\mu)^2-M_0^2-(\vec p-\vec q/2)^2][(p_0+\mu)^2-M_0^2-(\vec p+\vec q/2)^2]},
+\nonumber\\
+T_{\epsilon\epsilon}
+=2iN\int dx^0\int \frac{d^2\vec q}{(2\pi)^2}
+\overline \epsilon (-\vec q)\overline \epsilon (\vec q)\int \frac{d^3p}{(2\pi)^3}
+\frac{2\sigma^2+
+\vec q^2/2}{[(p_0+\mu)^2-M_0^2-(\vec p-\vec q/2)^2][(p_0+\mu)^2-M_0^2-(\vec p+\vec q/2)^2]}
+\Big\},\nonumber\\
+T_{\omega\omega}=2iN\int dx^0\int \frac{d^2\vec q}{(2\pi)^2}
+\overline \omega (-\vec q)\overline \omega (\vec q)\int \frac{d^3p}{(2\pi)^3}\frac{2\pi_0^2+
+\vec q^2/2}{[(p_0+\mu)^2-M_0^2-(\vec p-\vec q/2)^2][(p_0+\mu)^2-M_0^2-(\vec p+\vec q/2)^2]}
+\Big\}.
+\label{F28}
+\end{eqnarray}
+Since ${\cal S}^{(2)}_{\rm {eff}}$ in Eq. (\ref{F18}) has the form ${\cal S}^{(2)}_{\rm {eff}}=T_{\gamma^51}+
+T_{\gamma^52}+T_{\epsilon\epsilon}+T_{\omega\omega}$, we obtain, using Eqs. (\ref{F28}) for its components,
+\begin{eqnarray}
+{\cal S}^{(2)}_{\rm {eff}}(\epsilon,\omega)=2iN\int dx^0\int \frac{d^2\vec q}{(2\pi)^2}
+\left (\begin{array}{c}
+\overline \epsilon (-\vec q),
+\overline \omega (-\vec q)
+\end{array}\right )\left (\begin{array}{cc}
+2\sigma^2+
+\vec q^2/2,& 2\sigma\pi_0\\
+2\sigma\pi_0,& 2\pi_0^2+\vec q^2/2
+\end{array}\right )
+\left (\begin{array}{cc}
+\overline \epsilon (\vec q)\\
+\overline \omega (\vec q)
+\end{array}\right )F(\vec q),
+\label{F29}
+\end{eqnarray}
+where
+\begin{eqnarray}
+F(\vec q)=\int \frac{d^3p}{(2\pi)^3}\frac{1}{[(p_0+\mu)^2-M_0^2-(\vec p-\vec q/2)^2][(p_0+\mu)^2-M_0^2-(\vec p+\vec q/2)^2]}.
+\label{F30}
+\end{eqnarray}
+$\blacktriangleright$ It is evident that matrix $\Gamma\equiv\left (\begin{array}{cc}
+2\sigma^2+
+\vec q^2/2,& 2\sigma\pi_0\\
+2\sigma\pi_0,& 2\pi_0^2+\vec q^2/2
+\end{array}\right )$ has two positive eigenvalues $\lambda_1=\vec q^2/2$ and $\lambda_2=2\sigma^2+2\pi_0^2+ \vec q^2/2$. The corresponding eigenvectors are $\vec e_{\lambda_1}=\left(\begin{array}{cc}
+-\pi_0\\ \sigma
+\end{array}\right )$ and $\vec e_{\lambda_2}=\left(\begin{array}{cc}
+\sigma\\ \pi_0
+\end{array}\right )$, i.e. $\Gamma\cdot\vec e_{\lambda_1}=\lambda_1\vec e_{\lambda_1}$ and $\Gamma\cdot\vec e_{\lambda_2}=\lambda_2\vec e_{\lambda_2}$. Their scalar production is zero, i.e. $(\vec e_{\lambda_1},\vec e_{\lambda_2})=\vec e^T_{\lambda_1}\cdot \vec e_{\lambda_2}=0.$ In addition, we see that $(\vec e_{\lambda_1},\vec e_{\lambda_1})=(\vec e_{\lambda_2}\cdot \vec e_{\lambda_2})=M_0^2=\sigma^2+\pi_0^2.$ It is easy to show that
+\begin{eqnarray}
+\vec B(\vec q)\equiv \left (\begin{array}{cc}
+\overline \epsilon (\vec q)\\
+\overline \omega (\vec q)
+\end{array}\right )=\vec e_{\lambda_1}\frac{-\overline \epsilon (\vec q)\pi_0+\overline \omega (\vec q)\sigma}{M_0^2}+\vec e_{\lambda_2}\frac{\overline \epsilon (\vec q)\sigma+\overline \omega (\vec q)\pi_0}{M_0^2}.\label{F31}
+\end{eqnarray}
+Moreover, in Eq. (\ref{F29}) there is a row-matrix $\left (\begin{array}{c}
+\overline \epsilon (-\vec q),
+\overline \omega (-\vec q)
+\end{array}\right )$, which can be obtained from the vector $\vec B(\vec q)$ (\ref{F31})
+by the action of the complex conjugation and transposition operations, i.e. $\left (\begin{array}{c}
+\overline \epsilon (-\vec q),
+\overline \omega (-\vec q)
+\end{array}\right )=\vec B(\vec q)^{*T}=\left (\begin{array}{cc}
+\overline \epsilon (\vec q)\\
+\overline \omega (\vec q)
+\end{array}\right )^{*T}$. $\blacktriangleleft$
+As a result, if we do not take into account the function $F(\vec q)$ in Eq. (\ref{F29}),
+then the remaining part of the integrand will take the form (evidently, it is a non-negative)
+\begin{eqnarray}
+\left (\begin{array}{c}
+\overline \epsilon (-\vec q),
+\overline \omega (-\vec q)
+\end{array}\right )\left (\begin{array}{cc}
+2\sigma^2+
+\vec q^2/2,& 2\sigma\pi_0\\
+2\sigma\pi_0,& 2\pi_0^2+\vec q^2/2
+\end{array}\right )
+\left (\begin{array}{cc}
+\overline \epsilon (\vec q)\\
+\overline \omega (\vec q)
+\end{array}\right )=~~~~~~~~\nonumber\\
+\vec B(\vec q)^{*T}\cdot\Gamma\cdot\vec B(\vec q)=
+\lambda_1\frac{\big |-\overline \epsilon (\vec q)\pi_0+\overline \omega (\vec q)\sigma\big |^2}{M_0^2}+\lambda_2\frac{\big |\overline \epsilon (\vec q)\sigma+\overline \omega (\vec q)\pi_0\big |^2}{M_0^2}\ge 0.\label{F32}
+\end{eqnarray}
+Now the properties of the function $F(\vec q)$ (\ref{F30}) are in order. Since in our case $\mu<M_0$, the technique presented below Eq. (\ref{D24}) can be applied in order to integrate over $p_0$ in Eq. (\ref{F30}). As a result, we have
+\begin{eqnarray}
+{\cal S}^{(2)}_{\rm {eff}}(\epsilon,\omega)=-N\int dx^0\int \frac{d^2\vec q}{(2\pi)^2}\int \frac{d^2p}{(2\pi)^2}\frac{\lambda_1\big |\overline \epsilon (\vec q)\pi_0+\overline \omega (\vec q)\sigma\big |^2+\lambda_2\big |\overline \epsilon (\vec q)\sigma+\overline \omega (\vec q)\pi_0\big |^2}{M_0^2E_+E_-(E_++E_-)}.
+\label{F33}
+\end{eqnarray}
+where $E_\pm=\sqrt{M_0^2+(\vec p\pm\vec q/2)^2}$.
+
+
+\section{Task}
+Now you can see that in section "Stability of homogeneous vacuum in 3D NJL-type model under small inhomogeneous
+fluctuations" there has been done stability analysis of (2+1) NJL model.
+
+Obtain the formula for $S^2$ in the similar way as it is in this section "Stability of homogeneous vacuum in 3D NJL-type model under small inhomogeneous
+fluctuations" but in the case of the set up with magnetic field, discussed above with Lagrangian (1). The difference with section "Stability of homogeneous vacuum in 3D NJL-type model under small inhomogeneous
+fluctuations" is that there is now homogeneous magnetic field B.
+
+
+ the difference is mostly now that the expression for the propagator is different , it is in the non-zero constant magnetic field now. Find the expresion for the propagator in the setup of Lagrangian (1).
+
+ First the calculations are the same as in the case of $B=0$.
+Then substitute the propagator you will obtain into the expression for $S^2$ and you have to calculate traces over gamma matrices etc., try to simplify it (if possible perform integration ans sums etc).
+
+Perform the calculation of $S^2$ in all situations, when M is generated then M is not gererated. At all values of $\mu$, not only $\mu$ is greater and smaller than M.
+
+The expression for $S^{2}$ contains a term with \(G\), which can be eliminated from the gap equation if \(M\) is dynamically generated; however, if \(M\) is not generated and equals zero, renormalization is required—meaning that, if possible, one must isolate the divergent part and cancel it out with the \(G\)-term so that only \(g\) remains.
+
+Then we have the $\sigma$ and $\pi$ and you may need to diagonalize the matrix 2*2 as it is done in section "Stability of homogeneous vacuum in 3D NJL-type model under small inhomogeneous
+fluctuations"
+
+For $S^2$ we would like to have maximally simplified expression, maybe expressed as integral or in some special functions. Then we want to explore the sign of $S^2$ in order to find if there is instability of homogeneous ground state with respect to inhomogeneous fluctuations.
+\end{document}

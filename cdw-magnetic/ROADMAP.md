@@ -32,7 +32,7 @@
 |---|---|---|---|
 | Ф1 | Однородный TDP $\Omega(M;\mu,B,T)$ и функция щели $G(M)=\Omega'/M$; пересчёт [MC] на один мультиплет, $\nu=0$ | ✅ | [19](notes/19-homogeneous.md), `magcdw.hom.formulas` |
 | Ф2 | Неоднородный TDP $\Omega(M,b)$ через модель Раби: вакуум, конечные $\mu,T$ | ✅ выведен, нужен сводный документ | [07](notes/07-derivation-operators.md)–[10](notes/10-zero-field-limit.md) |
-| Ф3 | Вторая вариация $S^{(2)}(\varepsilon,\omega)$ в поле: пропагатор GMS, шпуры, $D_\sigma(q)$, $D_\pi(q)$; $M_0\ne0$ и $M_0=0$ | ⬜ план готов | [B0](notes/stability/00-plan.md), [B1](notes/stability/01-setup.md) |
+| Ф3 | Вторая вариация $S^{(2)}(\varepsilon,\omega)$ в поле: пропагатор GMS, шпуры, $D_\sigma(q)$, $D_\pi(q)$; $M_0\ne0$ и $M_0=0$; произвольная $T$ | ⬜ окончательная постановка и план согласованы (R13–R14) | [постановка](https://github.com/AlexeyKozhakin/theoretical-physics-lab/blob/main/cdw-magnetic/stability-task-v3.tex), [B0](notes/stability/00-plan.md) (заметки B2–B6), [B1](notes/stability/01-setup.md) |
 | Ф4 | Связи и проверки: $B\to0$ → [CDW] и задача $(\mu,L)$ при $L\to\infty$; $b=0$ → Ф1; $\partial_b^2\Omega$ ↔ коэффициент при $q^2$ в $D_\pi$ | 🟨 $B\to0$ и $b=0$ для Ф2 проверены | [10](notes/10-zero-field-limit.md) |
 
 **Готово, когда:** для Ф1–Ф3 есть один сводный документ на страницу с итоговыми формулами, и все проверки Ф4 выполнены численно.
