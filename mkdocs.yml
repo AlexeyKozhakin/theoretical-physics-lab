@@ -85,3 +85,5 @@ nav:
       - "Ветка B: анализ устойчивости":
           - B0. План и трудности: cdw-magnetic/notes/stability/00-plan.md
           - B1. Уточнённая постановка: cdw-magnetic/notes/stability/01-setup.md
+          - B2. Устойчивость при B = 0: cdw-magnetic/notes/stability/02-zero-field.md
+          - B3. Пропагатор в поле: cdw-magnetic/notes/stability/03-propagator.md
