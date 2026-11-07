@@ -57,6 +57,7 @@ nav:
   - Главная: README.md
   - CDW в магнитном поле:
       - cdw-magnetic/README.md
+      - Дорожная карта: cdw-magnetic/ROADMAP.md
       - Постановки задач: cdw-magnetic/tasks.md
       - Вопросы и решения: cdw-magnetic/questions.md
       - Журнал результатов: cdw-magnetic/findings.md
