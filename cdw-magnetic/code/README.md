@@ -114,3 +114,12 @@ OPENBLAS_NUM_THREADS=1 python3 cdw-magnetic/code/fast_benchmark.py
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 cdw-magnetic/code/adaptive_map.py --workers 4
 MPLCONFIGDIR=/tmp/mpl python3 cdw-magnetic/code/plot_adaptive_map.py
 ```
+
+## Пакет `magcdw` и однородная диаграмма
+
+Ядро расчётов переносится в пакет `cdw-magnetic/magcdw/` (см. [ROADMAP](../ROADMAP.md)); тесты — `cdw-magnetic/tests/`. Однородная задача — `magcdw.hom` ([заметка 19](../notes/19-homogeneous.md)).
+
+```bash
+OPENBLAS_NUM_THREADS=1 python3 -m pytest -q cdw-magnetic/tests
+OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/mpl python3 cdw-magnetic/code/hom_diagram.py --T 0 --n 240
+```

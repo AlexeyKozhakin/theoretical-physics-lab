@@ -81,6 +81,7 @@ nav:
           - 16. Первая предварительная карта фаз: cdw-magnetic/notes/16-preliminary-phase-map.md
           - 17. Быстрый движок карт: cdw-magnetic/notes/17-fast-engine.md
           - 18. Адаптивная карта фаз: cdw-magnetic/notes/18-adaptive-map.md
+          - 19. Однородная задача: cdw-magnetic/notes/19-homogeneous.md
       - "Ветка B: анализ устойчивости":
           - B0. План и трудности: cdw-magnetic/notes/stability/00-plan.md
           - B1. Уточнённая постановка: cdw-magnetic/notes/stability/01-setup.md

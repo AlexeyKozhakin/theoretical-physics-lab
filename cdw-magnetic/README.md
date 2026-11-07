@@ -72,6 +72,7 @@ $$\langle\sigma\rangle = M\cos 2bx,\qquad \langle\pi\rangle = M\sin 2bx.$$
 | [notes/16-preliminary-phase-map.md](notes/16-preliminary-phase-map.md) | Первая карта μ,B: 500 узлов, 58 проверенных CDW-кандидатов, ограничения и следующий шаг |
 | [notes/17-fast-engine.md](notes/17-fast-engine.md) | Быстрый движок карт: глобальная сетка (M,b), ленточная форма Раби, кэш вакуума, замеры скорости |
 | [notes/18-adaptive-map.md](notes/18-adaptive-map.md) | Адаптивная карта μ≤2, eB≤7 при T=0.01: CDW у порогов уровней Ландау |
+| [notes/19-homogeneous.md](notes/19-homogeneous.md) | Однородная задача: формулы, сертифицированный минимум, диаграммы при T=0 и 0.01 |
 | [notes/stability/00-plan.md](notes/stability/00-plan.md) | Ветка B: план анализа устойчивости, трудности |
 | [notes/stability/01-setup.md](notes/stability/01-setup.md) | Ветка B: уточнённая постановка, блочная структура, вид ответа |
 | `code/` | Воспроизводимые проверки, численные потенциалы и предварительная карта |
