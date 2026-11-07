@@ -32,7 +32,7 @@
 |---|---|---|---|
 | Ф1 | Однородный TDP $\Omega(M;\mu,B,T)$ и функция щели $G(M)=\Omega'/M$; пересчёт [MC] на один мультиплет, $\nu=0$ | ✅ | [19](notes/19-homogeneous.md), `magcdw.hom.formulas` |
 | Ф2 | Неоднородный TDP $\Omega(M,b)$ через модель Раби: вакуум, конечные $\mu,T$ | ✅ выведен, нужен сводный документ | [07](notes/07-derivation-operators.md)–[10](notes/10-zero-field-limit.md) |
-| Ф3 | Вторая вариация $S^{(2)}(\varepsilon,\omega)$ в поле: пропагатор GMS, шпуры, $D_\sigma(q)$, $D_\pi(q)$; $M_0\ne0$ и $M_0=0$; произвольная $T$ | 🟨 B2, B3, B4 ✅ (ответ $\Phi=\Phi_\pi\mathbb 1+2R\,vv^T$, сверка с веткой A); B5–B6 ⬜ | [постановка](https://github.com/AlexeyKozhakin/theoretical-physics-lab/blob/main/cdw-magnetic/stability-task-v3.tex), [B0](notes/stability/00-plan.md), [B2](notes/stability/02-zero-field.md), [B3](notes/stability/03-propagator.md), [B4](notes/stability/04-S2.md) |
+| Ф3 | Вторая вариация $S^{(2)}(\varepsilon,\omega)$ в поле: пропагатор GMS, шпуры, $D_\sigma(q)$, $D_\pi(q)$; $M_0\ne0$ и $M_0=0$; произвольная $T$ | 🟨 B2–B5 ✅ (ответ $\Phi=\Phi_\pi\mathbb 1+2R\,vv^T$, сверка с веткой A, быстрый расчёт); B6 ⬜ | [постановка](https://github.com/AlexeyKozhakin/theoretical-physics-lab/blob/main/cdw-magnetic/stability-task-v3.tex), [B0](notes/stability/00-plan.md), [B2](notes/stability/02-zero-field.md), [B3](notes/stability/03-propagator.md), [B4](notes/stability/04-S2.md), [B5](notes/stability/05-fast.md) |
 | Ф4 | Связи и проверки: $B\to0$ → [CDW] и задача $(\mu,L)$ при $L\to\infty$; $b=0$ → Ф1; $\partial_b^2\Omega$ ↔ коэффициент при $q^2$ в $D_\pi$ | 🟨 $B\to0$ и $b=0$ для Ф2 проверены | [10](notes/10-zero-field-limit.md) |
 
 **Готово, когда:** для Ф1–Ф3 есть один сводный документ на страницу с итоговыми формулами, и все проверки Ф4 выполнены численно.
@@ -44,7 +44,7 @@
 | А1 | Однородная задача: сертифицированный поиск всех корней уравнения щели, точные линии переходов I/II рода, каскад фаз по заполнению уровней, особые точки (как `njl3.b0`) | 🟨 поиск корней ✅; линии и особые точки ⬜ | [19](notes/19-homogeneous.md), `magcdw.hom.minimize` |
 | А2 | Неоднородная задача: быстрый движок (ленточная форма Раби, кэш вакуума, глобальная сетка $(M,b)$) | ✅ первая версия | [17](notes/17-fast-engine.md) |
 | А3 | Неоднородная: распараллелить уровни, целевое уточнение вдоль порогов, сертификация отчётных точек строгими границами | ⬜ | [16](notes/16-preliminary-phase-map.md) — границы базиса |
-| А4 | Устойчивость: быстрые формулы $D(q)$ (суммы Лагерра, собственное время), карта $\min_q D$ | ⬜ | — |
+| А4 | Устойчивость: быстрые формулы $D(q)$ (суммы Лагерра, собственное время), карта $\min_q D$ | 🟨 быстрые ядра ✅ (~1 мс); карта ⬜ | [B5](notes/stability/05-fast.md), `magcdw.stab.fast` |
 | А5 | Тесты: каждая формула против независимого расчёта (mpmath, прямая диагонализация, бесполевой предел) | 🟨 `tests/test_hom.py` (14 тестов); неоднородная и устойчивость ⬜ | `tests/`, `code/check_*.py` |
 
 ## Этап 3. Однородная диаграмма $(\mu,B)$ — статья 1

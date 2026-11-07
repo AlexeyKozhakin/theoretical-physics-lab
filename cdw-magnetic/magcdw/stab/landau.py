@@ -154,3 +154,93 @@ def kernels(q, mass, field, chemical, temperature, cutoffs=(50, 100, 200)):
     vals = np.array(rows)
     coef = np.linalg.solve(A, vals)
     return float(coef[0, 0]), float(coef[0, 1])
+
+
+def _vacuum_channel(states_a, states_c, Dm, n_reg):
+    """T = mu = 0: only interband pairs (E_a < 0 < E_c), counted twice (a <-> c), smooth regulator."""
+    neg = [s for s in states_a if s[2] < 0]
+    pos = [s for s in states_c if s[2] > 0]
+    n_a = np.array([s[0] for s in neg]); E_a = np.array([s[2] for s in neg])
+    r_a = np.array([s[3] for s in neg]); v_a = np.array([s[4] for s in neg])
+    n_c = np.array([s[0] for s in pos]); E_c = np.array([s[2] for s in pos])
+    r_c = np.array([s[3] for s in pos]); v_c = np.array([s[4] for s in pos])
+    Dup = Dm[np.maximum(n_a - 1, 0)[:, None], np.maximum(n_c - 1, 0)[None, :]]
+    Dlo = Dm[n_a[:, None], n_c[None, :]]
+    amp = -(r_a[:, None] * r_c[None, :]) * Dup + (v_a[:, None] * v_c[None, :]) * Dlo
+    weight = np.exp(-0.5 * (n_a[:, None] + n_c[None, :]) / n_reg)
+    return -2.0 * float(np.sum(amp * amp * weight / (E_c[None, :] - E_a[:, None])))
+
+
+def vacuum_polarization(q, mass, field, n_reg):
+    """(Pi_eps, Pi_omega) at T = mu = 0 with the smooth regulator exp(-centre/n_reg)."""
+    xi = q * q / (2 * field)
+    top = 14 * n_reg
+    window = int(4 * math.sqrt(xi * (top + 1)) + 4 * xi + 40) if xi > 0 else 0
+    n_all = top + window
+    Dm = displacement(math.sqrt(xi), n_all + 1) if xi > 0 else np.eye(n_all + 1)
+    st = levels(mass, field, n_all)
+    d = field / (2 * math.pi)
+    # each channel: both orderings of the blocks (eps: 1-1, 2-2; omega: 1-2, 2-1)
+    pe = sum(_vacuum_channel(st[b], st[b], Dm, n_reg) for b in (1, 2))
+    pw = sum(_vacuum_channel(st[b], st[c], Dm, n_reg) for b, c in ((1, 2), (2, 1)))
+    return 0.5 * d * pe, 0.5 * d * pw
+
+
+def vacuum_kernels(x, y, cutoffs=(50, 100, 200)):
+    """Scaled vacuum kernels at eB = 1: q = x, M = y. Returns (Phi_pi_vac, DeltaPi_vac) with
+    Phi_pi_vac = Pi_omega(q) - Pi_omega(0) and DeltaPi_vac = Pi_eps(q) - Pi_omega(q), extrapolated
+    in the regulator. For general eB: multiply by sqrt(eB) at x = q/sqrt(eB), y = M/sqrt(eB)."""
+    rows = []
+    for N in cutoffs:
+        e0, w0 = vacuum_polarization(0.0, y, 1.0, N)
+        eq, wq = vacuum_polarization(x, y, 1.0, N)
+        rows.append((wq - w0, eq - wq))
+    A = np.array([[1.0, N ** -0.5, 1.0 / N] for N in cutoffs])
+    coef = np.linalg.solve(A, np.array(rows))
+    return float(coef[0, 0]), float(coef[0, 1])
+
+
+def matter_polarization(q, mass, field, chemical, temperature):
+    """(Pi_eps, Pi_omega) matter parts: delta n = n_F(E - mu) - theta(-E), finite sums, no regulator.
+
+    Pi_mat = (d_B/2) [ 2 sum_{a active} dn_a sum_{c: E_c != E_a} |M_ac|^2/(E_a - E_c)
+                       + sum_{a active, c: E_c = E_a} |M_ac|^2 n_F'(E_a - mu) ].
+    """
+    mu, T = chemical, temperature
+    # active levels: |dn| > 1e-17 for E > 0 (thermal tail above mu) and E < 0 (holes, mu ~ 0)
+    e_top = abs(mu) + 40 * T
+    n_act = int(max(0.0, e_top * e_top - mass * mass) / (2 * field)) + 1
+    xi = q * q / (2 * field)
+    window = int(4 * math.sqrt(xi * (n_act + 1)) + 4 * xi + 40) if xi > 0 else 2
+    n_all = n_act + window
+    Dm = displacement(math.sqrt(xi), n_all + 1) if xi > 0 else np.eye(n_all + 1)
+    st = levels(mass, field, n_all)
+    d = field / (2 * math.pi)
+
+    def arrays(states):
+        return (np.array([s[0] for s in states]), np.array([s[2] for s in states]),
+                np.array([s[3] for s in states]), np.array([s[4] for s in states]))
+
+    def dn(E):
+        return _fermi(E, mu, T) - (E < 0)
+
+    def channel(sa, sc):
+        n_a, E_a, r_a, v_a = arrays(sa)
+        keep = (np.abs(dn(E_a)) > 1e-17) & (n_a <= n_act)
+        n_a, E_a, r_a, v_a = n_a[keep], E_a[keep], r_a[keep], v_a[keep]
+        if len(n_a) == 0:
+            return 0.0
+        n_c, E_c, r_c, v_c = arrays(sc)
+        Dup = Dm[np.maximum(n_a - 1, 0)[:, None], np.maximum(n_c - 1, 0)[None, :]]
+        Dlo = Dm[n_a[:, None], n_c[None, :]]
+        amp2 = (-(r_a[:, None] * r_c[None, :]) * Dup + (v_a[:, None] * v_c[None, :]) * Dlo) ** 2
+        dE = E_a[:, None] - E_c[None, :]
+        same = np.abs(dE) < 1e-12
+        regular = np.where(same, 0.0, amp2 / np.where(same, 1.0, dE))
+        total = 2 * np.sum(dn(E_a)[:, None] * regular)
+        total += np.sum(np.where(same, amp2, 0.0) * _fermi_prime(E_a, mu, T)[:, None])
+        return float(total)
+
+    pe = sum(channel(st[b], st[b]) for b in (1, 2))
+    pw = sum(channel(st[b], st[c]) for b, c in ((1, 2), (2, 1)))
+    return 0.5 * d * pe, 0.5 * d * pw
