@@ -108,7 +108,7 @@ OPENBLAS_NUM_THREADS=1 python3 cdw-magnetic/code/fast_benchmark.py
 
 ## Адаптивная карта
 
-`adaptive_map.py` строит карту $0<\mu\le2$, $0<|eB|\le7$ при $T=0.01$: грубая сетка 60×60 и три уровня деления рёбер с разными метками. Около 4 минут на 4 ядрах. Отчёт — `adaptive-map.json`, графики — `plot_adaptive_map.py` → `cdw-magnetic/figures/adaptive-map*.png`. Подробнее — [заметка 18](../notes/18-adaptive-map.md).
+`adaptive_map.py` строит карту $0<\mu\le2$, $0<|eB|\le7$ при $T=0.01$: грубая сетка 60×60 и три уровня деления рёбер с разными метками. Около 4 минут на 4 ядрах. Отчёт — `adaptive-map.json`, графики — `plot_adaptive_map.py` → `cdw-magnetic/figures/adaptive-map.png` (фаза, $M$, $b$; оси $x=|eB|$, $y=\mu$) и `adaptive-map-gain.png`. Подробнее — [заметка 18](../notes/18-adaptive-map.md).
 
 ```bash
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 cdw-magnetic/code/adaptive_map.py --workers 4
