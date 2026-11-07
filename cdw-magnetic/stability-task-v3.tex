@@ -1,4 +1,5 @@
-% Ветка B, окончательная постановка (получена 2026-11-07). Дословная копия присланного текста.
+% Ветка B, окончательная постановка (получена 2026-11-07). Дословная копия присланного текста;
+% единственное изменение — исправленный знак в (F33), см. комментарий у формулы.
 % "2dimCDW"/"file 3dimCDW" = [CDW]; ссылки (130), (13), (12), Appendix A/D/G — на [CDW].
 \documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
@@ -752,7 +753,10 @@ then the remaining part of the integrand will take the form (evidently, it is a 
 \end{eqnarray}
 Now the properties of the function $F(\vec q)$ (\ref{F30}) are in order. Since in our case $\mu<M_0$, the technique presented below Eq. (\ref{D24}) can be applied in order to integrate over $p_0$ in Eq. (\ref{F30}). As a result, we have
 \begin{eqnarray}
-{\cal S}^{(2)}_{\rm {eff}}(\epsilon,\omega)=-N\int dx^0\int \frac{d^2\vec q}{(2\pi)^2}\int \frac{d^2p}{(2\pi)^2}\frac{\lambda_1\big |\overline \epsilon (\vec q)\pi_0+\overline \omega (\vec q)\sigma\big |^2+\lambda_2\big |\overline \epsilon (\vec q)\sigma+\overline \omega (\vec q)\pi_0\big |^2}{M_0^2E_+E_-(E_++E_-)}.
+% ИСПРАВЛЕНО 2026-11-07 (подтверждено автором, questions.md R14): при \lambda_1 добавлен минус,
+% как в (F31)-(F32). Исходная строка:
+% {\cal S}^{(2)}_{\rm {eff}}(\epsilon,\omega)=-N\int dx^0\int \frac{d^2\vec q}{(2\pi)^2}\int \frac{d^2p}{(2\pi)^2}\frac{\lambda_1\big |\overline \epsilon (\vec q)\pi_0+\overline \omega (\vec q)\sigma\big |^2+\lambda_2\big |\overline \epsilon (\vec q)\sigma+\overline \omega (\vec q)\pi_0\big |^2}{M_0^2E_+E_-(E_++E_-)}.
+{\cal S}^{(2)}_{\rm {eff}}(\epsilon,\omega)=-N\int dx^0\int \frac{d^2\vec q}{(2\pi)^2}\int \frac{d^2p}{(2\pi)^2}\frac{\lambda_1\big |-\overline \epsilon (\vec q)\pi_0+\overline \omega (\vec q)\sigma\big |^2+\lambda_2\big |\overline \epsilon (\vec q)\sigma+\overline \omega (\vec q)\pi_0\big |^2}{M_0^2E_+E_-(E_++E_-)}.
 \label{F33}
 \end{eqnarray}
 where $E_\pm=\sqrt{M_0^2+(\vec p\pm\vec q/2)^2}$.

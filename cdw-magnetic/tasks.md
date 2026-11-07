@@ -97,7 +97,7 @@ Obtain the formula for $S^2$ in the similar way as it is done in Appendix F but 
 
 ## Ветка B: окончательная постановка (получена 2026-11-07)
 
-**Заменяет обе предыдущие формулировки ветки B по содержанию** (они сохранены выше). Полный текст — дословно, в исходном LaTeX: [stability-task-v3.tex](https://github.com/AlexeyKozhakin/theoretical-physics-lab/blob/main/cdw-magnetic/stability-task-v3.tex).
+**Заменяет обе предыдущие формулировки ветки B по содержанию** (они сохранены выше). Полный текст — дословно, в исходном LaTeX, с одним исправлением — знаком в итоговой формуле (F33), см. R14: [stability-task-v3.tex](https://github.com/AlexeyKozhakin/theoretical-physics-lab/blob/main/cdw-magnetic/stability-task-v3.tex).
 
 Документ самодостаточен:
 - модель (1) с $D_\mu=\partial_\mu+ieA_\mu$, $A_0=A_1=0$, $A_2=Bx_1$, $B=\text{const}$ (знак $B$ или $eB$ можно фиксировать);
