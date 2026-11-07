@@ -32,7 +32,7 @@
 |---|---|---|---|
 | Ф1 | Однородный TDP $\Omega(M;\mu,B,T)$ и функция щели $G(M)=\Omega'/M$; пересчёт [MC] на один мультиплет, $\nu=0$ | ✅ | [19](notes/19-homogeneous.md), `magcdw.hom.formulas` |
 | Ф2 | Неоднородный TDP $\Omega(M,b)$ через модель Раби: вакуум, конечные $\mu,T$ | ✅ выведен, нужен сводный документ | [07](notes/07-derivation-operators.md)–[10](notes/10-zero-field-limit.md) |
-| Ф3 | Вторая вариация $S^{(2)}(\varepsilon,\omega)$ в поле: пропагатор GMS, шпуры, $D_\sigma(q)$, $D_\pi(q)$; $M_0\ne0$ и $M_0=0$; произвольная $T$ | 🟨 B2–B5 ✅ (ответ $\Phi=\Phi_\pi\mathbb 1+2R\,vv^T$, сверка с веткой A, быстрый расчёт); B6 ⬜ | [постановка](https://github.com/AlexeyKozhakin/theoretical-physics-lab/blob/main/cdw-magnetic/stability-task-v3.tex), [B0](notes/stability/00-plan.md), [B2](notes/stability/02-zero-field.md), [B3](notes/stability/03-propagator.md), [B4](notes/stability/04-S2.md), [B5](notes/stability/05-fast.md) |
+| Ф3 | Вторая вариация $S^{(2)}(\varepsilon,\omega)$ в поле: пропагатор GMS, шпуры, $D_\sigma(q)$, $D_\pi(q)$; $M_0\ne0$ и $M_0=0$; произвольная $T$ | ✅ B2–B5; B6 — предварительные карты ([06](notes/stability/06-maps.md)) | [постановка](https://github.com/AlexeyKozhakin/theoretical-physics-lab/blob/main/cdw-magnetic/stability-task-v3.tex), [B0](notes/stability/00-plan.md), [B2](notes/stability/02-zero-field.md), [B3](notes/stability/03-propagator.md), [B4](notes/stability/04-S2.md), [B5](notes/stability/05-fast.md) |
 | Ф4 | Связи и проверки: $B\to0$ → [CDW] и задача $(\mu,L)$ при $L\to\infty$; $b=0$ → Ф1; $\partial_b^2\Omega$ ↔ коэффициент при $q^2$ в $D_\pi$ | 🟨 $B\to0$ и $b=0$ для Ф2 проверены | [10](notes/10-zero-field-limit.md) |
 
 **Готово, когда:** для Ф1–Ф3 есть один сводный документ на страницу с итоговыми формулами, и все проверки Ф4 выполнены численно.
@@ -64,8 +64,8 @@
 | Н2 | То же при $T=0.001$ | ⬜ | — |
 | Н3 | Укрупнённые расчёты около порогов $\mu^2=2n|eB|$, поиск пропущенных островков | ⬜ | — |
 | Н4 | Сертификация отчётных точек и границ | ⬜ | — |
-| У1 | Карта устойчивости однородной фазы: $\min_q D_\sigma$, $\min_q D_\pi$ | ⬜ | — |
-| У2 | Сверка: где неустойчивость — там CDW или переход первого рода | ⬜ | — |
+| У1 | Карта устойчивости однородной фазы: $\min_q D_\sigma$, $\min_q D_\pi$ | 🟨 60×60 при $T=0.01$, $0.001$; нужна сетка у уровней Ландау | [B6](notes/stability/06-maps.md) |
+| У2 | Сверка: где неустойчивость — там CDW или переход первого рода | 🟨 при $T=0.01$ совпадает с картой ветки A | [B6](notes/stability/06-maps.md) |
 
 ## Этап 5. Веб-лаборатория
 
