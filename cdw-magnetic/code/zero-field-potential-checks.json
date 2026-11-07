@@ -1,0 +1,93 @@
+{
+  "vacuum": [
+    {
+      "M": 0.7,
+      "b": 0.4,
+      "analytic": -0.024269614615839527,
+      "radial_checks": [
+        {
+          "cutoff": 20,
+          "value": -0.02426924611505801,
+          "quadrature_error_estimate": 1.4383668321970058e-09,
+          "difference_from_analytic": 3.6850078151753896e-07
+        },
+        {
+          "cutoff": 40,
+          "value": -0.024269568520696796,
+          "quadrature_error_estimate": 1.4271517007168969e-09,
+          "difference_from_analytic": 4.609514273057336e-08
+        }
+      ]
+    },
+    {
+      "M": 0.3,
+      "b": 0.8,
+      "analytic": 0.003676055121729419,
+      "radial_checks": [
+        {
+          "cutoff": 20,
+          "value": 0.0036761833098552933,
+          "quadrature_error_estimate": 2.453377757812032e-10,
+          "difference_from_analytic": 1.2818812587410064e-07
+        },
+        {
+          "cutoff": 40,
+          "value": 0.0036760711581844893,
+          "quadrature_error_estimate": 2.433033347496383e-10,
+          "difference_from_analytic": 1.6036455070117528e-08
+        }
+      ]
+    },
+    {
+      "M": 0.5,
+      "b": 0.5,
+      "analytic": -0.008538735772973836,
+      "radial_checks": [
+        {
+          "cutoff": 20,
+          "value": -0.008538585322943186,
+          "quadrature_error_estimate": 4.2314110931940456e-10,
+          "difference_from_analytic": 1.5045003065074225e-07
+        },
+        {
+          "cutoff": 40,
+          "value": -0.008538716955706242,
+          "quadrature_error_estimate": 4.2105041731464625e-10,
+          "difference_from_analytic": 1.8817267594811726e-08
+        }
+      ]
+    }
+  ],
+  "thermal": [
+    {
+      "M": 0.11199624,
+      "b": 0.79953681,
+      "mu": 1.05,
+      "T": 0.02,
+      "convolution": -0.061533991524812946,
+      "polar_direct": -0.06153399152482453,
+      "difference": 1.1581013925621164e-14,
+      "error_estimates_sum": 4.727206724931998e-10
+    },
+    {
+      "M": 0.7,
+      "b": 0.4,
+      "mu": 0.8,
+      "T": 0.2,
+      "convolution": -0.04904395402846267,
+      "polar_direct": -0.04904395402846949,
+      "difference": 6.8209327075408055e-15,
+      "error_estimates_sum": 1.4002449673929105e-11
+    },
+    {
+      "M": 0.3,
+      "b": 0.8,
+      "mu": 0,
+      "T": 0.1,
+      "convolution": 0.003045336880912442,
+      "polar_direct": 0.0030453368809023177,
+      "difference": 1.012427988666964e-14,
+      "error_estimates_sum": 3.316293940696461e-10
+    }
+  ]
+}

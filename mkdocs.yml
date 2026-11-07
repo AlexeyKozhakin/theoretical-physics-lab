@@ -61,12 +61,23 @@ nav:
       - Вопросы и решения: cdw-magnetic/questions.md
       - Журнал результатов: cdw-magnetic/findings.md
       - "Ветка A: TDP с CDW-анзацем":
+          - 00. Рабочий план при конечном T: cdw-magnetic/notes/00-plan.md
           - 01. Модель и анзац: cdw-magnetic/notes/01-setup.md
           - 02. Смешивание уровней Ландау: cdw-magnetic/notes/02-difficulty.md
           - 03. Предельные случаи: cdw-magnetic/notes/03-limits.md
           - 04. Перенормировка и аномалия: cdw-magnetic/notes/04-renorm.md
           - 05. Стратегия аналитического TDP: cdw-magnetic/notes/05-strategy.md
           - 06. Модель Раби и тепловое ядро: cdw-magnetic/notes/06-rabi-heat-kernel.md
+          - 07. Начало вывода и проверка AQRM: cdw-magnetic/notes/07-derivation-operators.md
+          - 08. Тепловой след и вакуумный потенциал: cdw-magnetic/notes/08-heat-kernel-vacuum.md
+          - 09. Полный TDP при произвольном μ: cdw-magnetic/notes/09-finite-density.md
+          - 10. Проверка предела B → 0: cdw-magnetic/notes/10-zero-field-limit.md
+          - 11. Относительный определитель и численный базис: cdw-magnetic/notes/11-relative-determinant.md
+          - 12. Границы базиса и однородные минимумы: cdw-magnetic/notes/12-basis-bounds-and-homogeneous.md
+          - 13. Адаптивный поиск и кандидат CDW: cdw-magnetic/notes/13-adaptive-search-and-cdw-candidate.md
+          - 14. Уточнение локального минимума CDW: cdw-magnetic/notes/14-local-cdw-minimum.md
+          - 15. Продолжение кандидата и бесполевой контроль: cdw-magnetic/notes/15-continuation-and-zero-field-control.md
+          - 16. Первая предварительная карта фаз: cdw-magnetic/notes/16-preliminary-phase-map.md
       - "Ветка B: анализ устойчивости":
           - B0. План и трудности: cdw-magnetic/notes/stability/00-plan.md
           - B1. Уточнённая постановка: cdw-magnetic/notes/stability/01-setup.md

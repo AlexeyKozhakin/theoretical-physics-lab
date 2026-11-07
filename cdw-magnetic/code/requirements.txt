@@ -1,0 +1,7 @@
+# Scientific environment used for the saved numerical reports (Python 3.11).
+# Documentation dependencies are in the repository-root requirements.txt.
+numpy==2.2.5
+scipy==1.17.0
+sympy==1.14.0
+mpmath==1.3.0
+matplotlib==3.10.8

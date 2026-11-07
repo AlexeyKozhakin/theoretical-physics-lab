@@ -1,0 +1,163 @@
+{
+  "normalization": "per unit area, per fermion copy; m_star=1",
+  "finite_matrix_checks": [
+    {
+      "cutoff": 12,
+      "mu": 0.0,
+      "T": 0.2,
+      "delta": 0.013280362927298579,
+      "spectral_reference": 0.013280362929356733,
+      "frequency_bound": 6.06962919510601e-10,
+      "positive_frequencies": 16,
+      "error": 2.058153994455303e-12
+    },
+    {
+      "cutoff": 12,
+      "mu": 1.2,
+      "T": 0.2,
+      "delta": -0.0009860026780743546,
+      "spectral_reference": -0.0009860026762066843,
+      "frequency_bound": 6.06962919510601e-10,
+      "positive_frequencies": 16,
+      "error": 1.86767029793089e-12
+    },
+    {
+      "cutoff": 12,
+      "mu": 1.8,
+      "T": 0.2,
+      "delta": -0.002872055733587591,
+      "spectral_reference": -0.002872055731946273,
+      "frequency_bound": 6.06962919510601e-10,
+      "positive_frequencies": 16,
+      "error": 1.641317724093705e-12
+    },
+    {
+      "cutoff": 12,
+      "mu": 4.0,
+      "T": 0.15,
+      "delta": -0.0021294380546511044,
+      "spectral_reference": -0.0021294380545778748,
+      "frequency_bound": 7.997176053466034e-11,
+      "positive_frequencies": 32,
+      "error": 7.322961681488493e-14
+    },
+    {
+      "cutoff": 12,
+      "mu": 0.8,
+      "T": 0.02,
+      "delta": -0.0004136412270220206,
+      "spectral_reference": -0.00041364122694317895,
+      "frequency_bound": 5.796736426343507e-11,
+      "positive_frequencies": 256,
+      "error": 7.88416641001044e-14
+    },
+    {
+      "cutoff": 24,
+      "mu": 0.0,
+      "T": 0.2,
+      "delta": 0.014178107440724948,
+      "spectral_reference": 0.014178107444785122,
+      "frequency_bound": 6.06962919510601e-10,
+      "positive_frequencies": 16,
+      "error": 4.060174071951472e-12
+    },
+    {
+      "cutoff": 24,
+      "mu": 1.2,
+      "T": 0.2,
+      "delta": -8.826027011707344e-05,
+      "spectral_reference": -8.826026641428179e-05,
+      "frequency_bound": 6.06962919510601e-10,
+      "positive_frequencies": 16,
+      "error": 3.702791654021376e-12
+    },
+    {
+      "cutoff": 24,
+      "mu": 1.8,
+      "T": 0.2,
+      "delta": -0.001974353706928703,
+      "spectral_reference": -0.001974353703654919,
+      "frequency_bound": 6.06962919510601e-10,
+      "positive_frequencies": 16,
+      "error": 3.273784021651238e-12
+    },
+    {
+      "cutoff": 24,
+      "mu": 4.0,
+      "T": 0.15,
+      "delta": -0.002087781459551357,
+      "spectral_reference": -0.0020877814594001537,
+      "frequency_bound": 7.997176053466034e-11,
+      "positive_frequencies": 32,
+      "error": 1.5120326865569744e-13
+    },
+    {
+      "cutoff": 24,
+      "mu": 0.8,
+      "T": 0.02,
+      "delta": 0.0004841032988114565,
+      "spectral_reference": 0.00048410329897962865,
+      "frequency_bound": 5.796736426343507e-11,
+      "positive_frequencies": 256,
+      "error": 1.681721710673767e-13
+    }
+  ],
+  "basis_convergence": [
+    {
+      "cutoff": 16,
+      "vacuum_delta": 0.014876185744571526,
+      "delta_mu_1p2_T_0p2": -0.0005748026741583073,
+      "leading_uv_tail_estimate": 0.0024661313931198642,
+      "corrected_delta_estimate": 0.0018913287189615568
+    },
+    {
+      "cutoff": 32,
+      "vacuum_delta": 0.0156504636502355,
+      "delta_mu_1p2_T_0p2": 0.00019947517023998474,
+      "leading_uv_tail_estimate": 0.0017438182313720834,
+      "corrected_delta_estimate": 0.0019432934016120683
+    },
+    {
+      "cutoff": 64,
+      "vacuum_delta": 0.016188367976937908,
+      "delta_mu_1p2_T_0p2": 0.0007373794969351532,
+      "leading_uv_tail_estimate": 0.0012330656965599321,
+      "corrected_delta_estimate": 0.0019704451934950853
+    },
+    {
+      "cutoff": 128,
+      "vacuum_delta": 0.016563731325774662,
+      "delta_mu_1p2_T_0p2": 0.0011127428458298093,
+      "leading_uv_tail_estimate": 0.0008719091156860417,
+      "corrected_delta_estimate": 0.001984651961515851
+    },
+    {
+      "cutoff": 256,
+      "vacuum_delta": 0.016826453116389275,
+      "delta_mu_1p2_T_0p2": 0.0013754646362707209,
+      "leading_uv_tail_estimate": 0.0006165328482799661,
+      "corrected_delta_estimate": 0.001991997484550687
+    },
+    {
+      "cutoff": 512,
+      "vacuum_delta": 0.0170107647769951,
+      "delta_mu_1p2_T_0p2": 0.0015597762971081494,
+      "leading_uv_tail_estimate": 0.00043595455784302086,
+      "corrected_delta_estimate": 0.0019957308549511704
+    }
+  ],
+  "independent_vacuum_benchmark": {
+    "B": 0.8,
+    "M": 0.8,
+    "b": 0.1,
+    "heat_partial": 0.0012718687671149128,
+    "heat_tail_bound": 2.1297324551609454e-08,
+    "quadrature_change": 1.0173202774979573e-11,
+    "basis_extrapolations": [
+      0.001271860175537986,
+      0.0012718747072608648
+    ],
+    "warning": "Extrapolation windows are a diagnostic, not a certified basis error."
+  },
+  "limitations": "Frequency tail bound excludes oscillator truncation and floating roundoff; UV-tail correction/extrapolation is diagnostic, not a uniform certified bound."
+}

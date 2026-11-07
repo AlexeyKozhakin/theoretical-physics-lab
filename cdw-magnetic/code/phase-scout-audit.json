@@ -1,0 +1,291 @@
+{
+  "representative_checks": [
+    {
+      "B": 0.6,
+      "mu": 1.125,
+      "reference_401": -0.07036631112898871,
+      "validation": [
+        {
+          "N": 512,
+          "gap_lower": -0.0025519295914186316,
+          "gap_upper": -0.0025467883915352143,
+          "corrected_gap": -0.002551927571131674,
+          "direct_matsubara_discrepancy": 5.838775643529637e-13,
+          "interval": {
+            "lower": -0.0048140168019184595,
+            "upper": -0.00480887960203504,
+            "finite_basis_value": -0.005111919644891163,
+            "frequency_error_bound": 1.9609804561569658e-11,
+            "vacuum": {
+              "supported": true,
+              "lower": 0.0002979028625827625,
+              "upper": 0.0003030400232463193,
+              "kappa0": 1.3096891528160997,
+              "first_term_tail": 0.0002979028626757859,
+              "born_quadrature_error_estimate": 9.3023428817816e-14,
+              "upper_method": "discarded_tail_schur",
+              "tail_block_upper": 0.0002928450267271984,
+              "boundary_upper": 1.019499651912091e-05,
+              "discarded_schur_lower": 0.027908964641714582
+            },
+            "thermal": {
+              "lower_correction": -2.544443745170813e-16,
+              "upper_correction": 0.0,
+              "low_levels_enclosed": 511,
+              "discarded_block_lower": 614.07947637953,
+              "low_energy_cutoff_squared": 307.039738189765,
+              "comparison_tail_bound": 0.0
+            },
+            "fixed_background_sign": "negative_cost_at_fixed_mass",
+            "decision_tolerance": 1e-10,
+            "numerical_status": "Analytic inequalities with estimated quadrature; no interval-arithmetic roundoff proof"
+          },
+          "elapsed_seconds": 2.9260086249996675
+        }
+      ]
+    },
+    {
+      "B": 0.22,
+      "mu": 1.125,
+      "reference_401": -0.07552428599831663,
+      "validation": [
+        {
+          "N": 512,
+          "gap_lower": -4.4092082622620786e-07,
+          "gap_upper": -6.281450291750956e-08,
+          "corrected_gap": -4.3891388182889374e-07,
+          "direct_matsubara_discrepancy": 1.8747120013058033e-13,
+          "interval": {
+            "lower": -1.570393377392487e-05,
+            "upper": -1.5329827450616904e-05,
+            "finite_basis_value": -2.4846780592701404e-05,
+            "frequency_error_bound": 6.673094842268306e-12,
+            "vacuum": {
+              "supported": true,
+              "lower": 9.142853491871375e-06,
+              "upper": 9.516946468989655e-06,
+              "kappa0": 7.42892239362937,
+              "first_term_tail": 9.14285357570769e-06,
+              "born_quadrature_error_estimate": 8.383631457517094e-14,
+              "upper_method": "discarded_tail_schur",
+              "tail_block_upper": 8.782884969043964e-06,
+              "boundary_upper": 7.340614999456912e-07,
+              "discarded_schur_lower": 5.969594296635431e-07
+            },
+            "thermal": {
+              "lower_correction": 2.2394260376193802e-305,
+              "upper_correction": 8.358907735319228e-305,
+              "low_levels_enclosed": 511,
+              "discarded_block_lower": 225.2234514180859,
+              "low_energy_cutoff_squared": 112.61172570904294,
+              "comparison_tail_bound": 1.4311706521131973e-209
+            },
+            "fixed_background_sign": "negative_cost_at_fixed_mass",
+            "decision_tolerance": 1e-10,
+            "numerical_status": "Analytic inequalities with estimated quadrature; no interval-arithmetic roundoff proof"
+          },
+          "elapsed_seconds": 1.5320697499992093
+        }
+      ]
+    },
+    {
+      "B": 0.2,
+      "mu": 1.05,
+      "reference_401": -0.06166358952865553,
+      "validation": [
+        {
+          "N": 512,
+          "gap_lower": -2.3725745521619933e-05,
+          "gap_upper": -2.0297427693555582e-05,
+          "corrected_gap": -2.372372556252219e-05,
+          "direct_matsubara_discrepancy": 5.056865841866764e-13,
+          "interval": {
+            "lower": -6.288789704486047e-05,
+            "upper": -5.946357921679391e-05,
+            "finite_basis_value": -0.00015539965479024624,
+            "frequency_error_bound": 1.9389849723987974e-11,
+            "vacuum": {
+              "supported": true,
+              "lower": 9.25117771352355e-05,
+              "upper": 9.593605618360261e-05,
+              "kappa0": 6.1975875842107095,
+              "first_term_tail": 9.251177719879575e-05,
+              "born_quadrature_error_estimate": 6.356024897634446e-14,
+              "upper_method": "discarded_tail_schur",
+              "tail_block_upper": 8.914379177417618e-05,
+              "boundary_upper": 6.792264409426431e-06,
+              "discarded_schur_lower": 2.4125205387544378e-05
+            },
+            "thermal": {
+              "lower_correction": 6.902261587214491e-292,
+              "upper_correction": 2.6685900889327037e-291,
+              "low_levels_enclosed": 511,
+              "discarded_block_lower": 204.63347823165608,
+              "low_energy_cutoff_squared": 102.31673911582804,
+              "comparison_tail_bound": 2.250127925494285e-200
+            },
+            "fixed_background_sign": "negative_cost_at_fixed_mass",
+            "decision_tolerance": 1e-10,
+            "numerical_status": "Analytic inequalities with estimated quadrature; no interval-arithmetic roundoff proof"
+          },
+          "elapsed_seconds": 2.0455264580014045
+        }
+      ]
+    },
+    {
+      "B": 0.3,
+      "mu": 1.125,
+      "reference_401": -0.07501362480847257,
+      "validation": [
+        {
+          "N": 512,
+          "gap_lower": -1.0287124925471511e-05,
+          "gap_upper": -7.762523319533923e-06,
+          "corrected_gap": -1.028510367185589e-05,
+          "direct_matsubara_discrepancy": 6.603274242504564e-13,
+          "interval": {
+            "lower": -0.0003108682350227239,
+            "upper": -0.00030834763341679053,
+            "finite_basis_value": -0.0003878870547043895,
+            "frequency_error_bound": 2.0359831191650498e-11,
+            "vacuum": {
+              "supported": true,
+              "lower": 7.70188400422283e-05,
+              "upper": 7.953940092776783e-05,
+              "kappa0": 4.917935716471976,
+              "first_term_tail": 7.701884027495063e-05,
+              "born_quadrature_error_estimate": 2.3272233127991605e-13,
+              "upper_method": "discarded_tail_schur",
+              "tail_block_upper": 7.454381172958009e-05,
+              "boundary_upper": 4.995589198187749e-06,
+              "discarded_schur_lower": 7.836684029096047e-05
+            },
+            "thermal": {
+              "lower_correction": -7.315275767366088e-16,
+              "upper_correction": 0.0,
+              "low_levels_enclosed": 511,
+              "discarded_block_lower": 307.02971829630883,
+              "low_energy_cutoff_squared": 153.51485914815441,
+              "comparison_tail_bound": 4.512314918533955e-248
+            },
+            "fixed_background_sign": "negative_cost_at_fixed_mass",
+            "decision_tolerance": 1e-10,
+            "numerical_status": "Analytic inequalities with estimated quadrature; no interval-arithmetic roundoff proof"
+          },
+          "elapsed_seconds": 2.0050380829998176
+        }
+      ]
+    }
+  ],
+  "unresolved_retries": [
+    {
+      "B": 0.05,
+      "mu": 1.0,
+      "actual_checked_point": {
+        "mass": 0.15234579588625485,
+        "wave": 0.717056771914421,
+        "corrected_gap": -4.403607248699504e-06,
+        "converged": true,
+        "evaluations": 45,
+        "outer_boundary": false,
+        "N": 128
+      },
+      "retries": [
+        {
+          "N": 256,
+          "lower_relative": -4.589483872753598e-06,
+          "upper_relative": 3.681242458578081e-05,
+          "vacuum_upper_available": true
+        },
+        {
+          "N": 512,
+          "lower_relative": -4.586997789054288e-06,
+          "upper_relative": 1.4863637979750188e-05,
+          "vacuum_upper_available": true
+        }
+      ]
+    },
+    {
+      "B": 0.075,
+      "mu": 1.025,
+      "actual_checked_point": {
+        "mass": 0.060235364437103284,
+        "wave": 0.9035685825347908,
+        "corrected_gap": -4.408491477467003e-06,
+        "converged": true,
+        "evaluations": 28,
+        "outer_boundary": false,
+        "N": 128
+      },
+      "retries": [
+        {
+          "N": 256,
+          "lower_relative": -1.8702940627458425e-05,
+          "upper_relative": null,
+          "vacuum_upper_available": false
+        },
+        {
+          "N": 512,
+          "failure": "Thermal spectral bounds are inconsistent"
+        }
+      ]
+    }
+  ],
+  "spectral_reuse_checks": [
+    {
+      "mass": 0.025,
+      "wave": 0.15,
+      "mu": 0.8,
+      "difference": -3.608224830031759e-16
+    },
+    {
+      "mass": 0.025,
+      "wave": 0.15,
+      "mu": 1.05,
+      "difference": -8.465450562766819e-16
+    },
+    {
+      "mass": 0.025,
+      "wave": 0.15,
+      "mu": 1.4,
+      "difference": -5.273559366969494e-16
+    },
+    {
+      "mass": 0.2,
+      "wave": 0.8,
+      "mu": 0.8,
+      "difference": 8.257283745649602e-16
+    },
+    {
+      "mass": 0.2,
+      "wave": 0.8,
+      "mu": 1.05,
+      "difference": 2.706168622523819e-16
+    },
+    {
+      "mass": 0.2,
+      "wave": 0.8,
+      "mu": 1.4,
+      "difference": 6.938893903907228e-16
+    },
+    {
+      "mass": 1.1,
+      "wave": 0.025,
+      "mu": 0.8,
+      "difference": 1.5265566588595902e-16
+    },
+    {
+      "mass": 1.1,
+      "wave": 0.025,
+      "mu": 1.05,
+      "difference": 1.5959455978986625e-15
+    },
+    {
+      "mass": 1.1,
+      "wave": 0.025,
+      "mu": 1.4,
+      "difference": -1.0130785099704553e-15
+    }
+  ],
+  "previous_witness_matches_including_duplicate_center": 8
+}
