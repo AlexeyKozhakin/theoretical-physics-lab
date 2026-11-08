@@ -131,3 +131,7 @@ OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/mpl python3 cdw-magnetic/code/hom_diagr
 ```bash
 OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/mpl python3 cdw-magnetic/code/stab_adaptive_map.py --workers 4
 ```
+
+## Неоднородная карта в области пиков и сравнение с устойчивостью
+
+`inh_adaptive_map.py` — CDW-карта в $1<\mu\le2$, $0.16\le|eB|\le2$ при $T=0.01$ (~9 минут на 4 ядрах); `plot_adaptive_map.py inh-adaptive-map` — фаза, $M$, $b$; `plot_inh_vs_stab.py` — наложение на карту устойчивости. Подробнее — [заметка 20](../notes/20-inh-map-peaks.md).

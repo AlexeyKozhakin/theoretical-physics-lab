@@ -9,6 +9,7 @@ Usage (from the repository root):
 """
 
 import json
+import sys
 from pathlib import Path
 
 import matplotlib
@@ -47,15 +48,17 @@ def raster(data, nodes, values):
 def axes_style(ax, data, title):
     ax.set_xlabel(r"$|eB|/m_*^2$")
     ax.set_ylabel(r"$\mu/m_*$")
-    ax.set_xlim(0, data["B_max"])
-    ax.set_ylim(0, data["mu_max"])
+    ax.set_xlim(data["B_min"], data["B_max"])
+    ax.set_ylim(data["mu_min"], data["mu_max"])
     ax.set_title(title)
 
 
-def main():
-    data = json.loads((HERE / "adaptive-map.json").read_text())
+def main(name="adaptive-map"):
+    data = json.loads((HERE / f"{name}.json").read_text())
+    data.setdefault("mu_min", 0.0)
+    data.setdefault("B_min", 0.0)
     nodes = data["nodes"]
-    extent = (0, data["B_max"], 0, data["mu_max"])
+    extent = (data["B_min"], data["B_max"], data["mu_min"], data["mu_max"])
 
     labels = raster(data, nodes, [ORDER.index(n["label"]) for n in nodes])
     masses = raster(data, nodes, [minimum_mass(n) for n in nodes])
@@ -86,7 +89,7 @@ def main():
     fig.colorbar(im, ax=ax, label=r"$b/m_*$ at the minimum (CDW only)")
     axes_style(ax, data, r"$b$ of the global minimum ($b=0$ elsewhere)")
     FIG.mkdir(exist_ok=True)
-    fig.savefig(FIG / "adaptive-map.png", dpi=150)
+    fig.savefig(FIG / f"{name}.png", dpi=150)
     plt.close(fig)
 
     # Computed nodes and CDW gain
@@ -100,9 +103,9 @@ def main():
                         cmap="magma_r", norm=LogNorm(vmin=max(gain.min(), 1e-8), vmax=gain.max()))
         fig.colorbar(sc, ax=ax, label=r"CDW gain $-\delta$ ($m_*^3$)")
     axes_style(ax, data, "Computed nodes and CDW gain")
-    fig.savefig(FIG / "adaptive-map-gain.png", dpi=150)
+    fig.savefig(FIG / f"{name}-gain.png", dpi=150)
     plt.close(fig)
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1] if len(sys.argv) > 1 else "adaptive-map")
