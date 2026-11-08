@@ -123,3 +123,11 @@ MPLCONFIGDIR=/tmp/mpl python3 cdw-magnetic/code/plot_adaptive_map.py
 OPENBLAS_NUM_THREADS=1 python3 -m pytest -q cdw-magnetic/tests
 OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/mpl python3 cdw-magnetic/code/hom_diagram.py --T 0 --n 240
 ```
+
+## Устойчивость: адаптивная карта
+
+`stab_adaptive_map.py` — карта устойчивости однородного минимума в $1<\mu\le2$, $0.16\le|eB|\le2$ при $T=0.01$: 60×60 и три уровня деления рёбер, ~2–3 минуты на 4 ядрах; `stab_map.py` — равномерная карта. Подробнее — [заметка B6](../notes/stability/06-maps.md).
+
+```bash
+OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/mpl python3 cdw-magnetic/code/stab_adaptive_map.py --workers 4
+```
