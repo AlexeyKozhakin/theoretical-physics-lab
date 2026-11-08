@@ -6,10 +6,12 @@ Labels: S (stable), U0 (M0 = 0 unstable), UG (Goldstone unstable), UR (radial un
 
 Usage (from the repository root):
     OPENBLAS_NUM_THREADS=1 python3 cdw-magnetic/code/stab_adaptive_map.py --workers 4
+    CDW_T=0.02 OPENBLAS_NUM_THREADS=1 python3 cdw-magnetic/code/stab_adaptive_map.py --workers 4
     MPLCONFIGDIR=/tmp/mpl python3 cdw-magnetic/code/stab_adaptive_map.py --plot-only
 """
 
 import argparse
+import os
 from concurrent.futures import ProcessPoolExecutor
 import json
 import math
@@ -24,12 +26,13 @@ sys.path.insert(0, str(HERE.parent))
 from magcdw.hom.minimize import find_minimum  # noqa: E402
 from magcdw.stab import fast  # noqa: E402
 
-T = 0.01
+T = float(os.environ.get("CDW_T", "0.01"))     # temperature; files get a suffix unless T = 0.01
+TAG = "" if T == 0.01 else f"-T{T:g}"
 MU_MIN, MU_MAX, B_MIN, B_MAX = 1.0, 2.0, 0.16, 2.0   # B >= 0.16: q <= 4 stays inside the vacuum table (q <= 10 sqrt(eB))
 COARSE, LEVELS = 60, 3
 UNIT = 2 ** LEVELS
 QS = np.linspace(0.05, 4.0, 80)
-OUT = HERE / "stab-adaptive-map.json"
+OUT = HERE / f"stab-adaptive-map{TAG}.json"
 
 
 def mu_of(i):
@@ -105,7 +108,7 @@ def plot(data, path):
               cmap=ListedColormap(colors), vmin=-0.5, vmax=3.5)
     for c, name in zip(colors, names):
         ax.scatter([], [], marker="s", color=c, label=name)
-    amap = HERE / "adaptive-map.json"
+    amap = HERE / f"inh-adaptive-map{TAG}.json"
     if amap.exists():
         cdw = [n for n in json.loads(amap.read_text())["nodes"] if n["label"] == "cdw"
                and data["mu_min"] < n["mu"] <= data["mu_max"] and n["B"] <= data["B_max"]]
@@ -144,7 +147,7 @@ def main():
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--plot-only", action="store_true")
     args = parser.parse_args()
-    fig = HERE.parent / "figures" / "stab-adaptive-map.png"
+    fig = HERE.parent / "figures" / f"stab-adaptive-map{TAG}.png"
     if args.plot_only:
         plot(json.loads(OUT.read_text()), fig)
         return

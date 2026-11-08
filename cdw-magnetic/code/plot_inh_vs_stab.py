@@ -5,6 +5,7 @@ Usage (from the repository root):
 """
 
 import json
+import sys
 from pathlib import Path
 
 import matplotlib
@@ -25,9 +26,9 @@ def raster(data, values):
     return np.asarray(values)[idx].reshape(gi.shape)
 
 
-def main():
-    inh = json.loads((HERE / "inh-adaptive-map.json").read_text())
-    stab = json.loads((HERE / "stab-adaptive-map.json").read_text())
+def main(tag=""):
+    inh = json.loads((HERE / f"inh-adaptive-map{tag}.json").read_text())
+    stab = json.loads((HERE / f"stab-adaptive-map{tag}.json").read_text())
     order = ["sym", "hom", "cdw"]
     phase = raster(inh, [order.index(n["label"]) for n in inh["nodes"]])
     unstable = raster(stab, [0.0 if n["label"] == "S" else 1.0 for n in stab["nodes"]])
@@ -46,8 +47,8 @@ def main():
     ax.set_xlabel(r"$|eB|/m_*^2$")
     ax.set_ylabel(r"$\mu/m_*$")
     ax.set_title(f"CDW map vs local instability, T = {inh['T']}")
-    fig.savefig(HERE.parent / "figures" / "inh-vs-stab.png", dpi=150)
+    fig.savefig(HERE.parent / "figures" / f"inh-vs-stab{tag}.png", dpi=150)
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1] if len(sys.argv) > 1 else "")   # e.g. "-T0.02"

@@ -73,7 +73,7 @@ $$\langle\sigma\rangle = M\cos 2bx,\qquad \langle\pi\rangle = M\sin 2bx.$$
 | [notes/17-fast-engine.md](notes/17-fast-engine.md) | Быстрый движок карт: глобальная сетка (M,b), ленточная форма Раби, кэш вакуума, замеры скорости |
 | [notes/18-adaptive-map.md](notes/18-adaptive-map.md) | Адаптивная карта μ≤2, eB≤7 при T=0.01: CDW у порогов уровней Ландау |
 | [notes/19-homogeneous.md](notes/19-homogeneous.md) | Однородная задача: формулы, сертифицированный минимум, диаграммы при T=0 и 0.01 |
-| [notes/20-inh-map-peaks.md](notes/20-inh-map-peaks.md) | Неоднородная карта 1<μ≤2, 0.16≤eB≤2 при T=0.01: полосы CDW n=1, 2; сверка с устойчивостью (99.3%) |
+| [notes/20-inh-map-peaks.md](notes/20-inh-map-peaks.md) | Неоднородная карта 1<μ≤2, 0.16≤eB≤2 при T=0.02, 0.01, 0.005: полосы CDW у порогов уровней Ландау; сверка с устойчивостью |
 | [notes/stability/00-plan.md](notes/stability/00-plan.md) | Ветка B: план анализа устойчивости, трудности |
 | [notes/stability/01-setup.md](notes/stability/01-setup.md) | Ветка B: уточнённая постановка, блочная структура, вид ответа |
 | `code/` | Воспроизводимые проверки, численные потенциалы и предварительная карта |

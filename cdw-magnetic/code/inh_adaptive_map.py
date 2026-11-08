@@ -10,9 +10,11 @@ sym (M = 0). Values are not certified (see fast_engine.py).
 
 Usage (from the repository root):
     OPENBLAS_NUM_THREADS=1 python3 cdw-magnetic/code/inh_adaptive_map.py --workers 4
+    CDW_T=0.02 OPENBLAS_NUM_THREADS=1 python3 cdw-magnetic/code/inh_adaptive_map.py --workers 4
 """
 
 import argparse
+import os
 from concurrent.futures import ProcessPoolExecutor
 import json
 import math
@@ -24,7 +26,8 @@ import numpy as np
 from fast_engine import scan_row
 
 HERE = Path(__file__).resolve().parent
-T = 0.01
+T = float(os.environ.get("CDW_T", "0.01"))     # temperature; files get a suffix unless T = 0.01
+TAG = "" if T == 0.01 else f"-T{T:g}"
 MU_MIN, MU_MAX, B_MIN, B_MAX = 1.0, 2.0, 0.16, 2.0
 COARSE = 60
 LEVELS = 3
@@ -141,7 +144,7 @@ def main():
                                 "leader of a global grid search over (M, b).",
               "elapsed_s": total, "stats": stats, "counts": counts,
               "nodes": [{"i": i, "j": j, **r} for (i, j), r in sorted(nodes.items())]}
-    (HERE / "inh-adaptive-map.json").write_text(json.dumps(report, indent=1))
+    (HERE / f"inh-adaptive-map{TAG}.json").write_text(json.dumps(report, indent=1))
 
 
 if __name__ == "__main__":
